@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated polycar -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="fr.unice.polytech.polycar.presentation.PolycarModelWizardID"
+            name="%_UI_PolycarModelWizard_label"
+            class="fr.unice.polytech.polycar.presentation.PolycarModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/PolycarModelFile.gif">
+         <description>%_UI_PolycarModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated polycar -->
+      <editor
+            id="fr.unice.polytech.polycar.presentation.PolycarEditorID"
+            name="%_UI_PolycarEditor_label"
+            icon="icons/full/obj16/PolycarModelFile.gif"
+            extensions="polycar"
+            class="fr.unice.polytech.polycar.presentation.PolycarEditor"
+            contributorClass="fr.unice.polytech.polycar.presentation.PolycarActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: fr.unice.polytech.polycar.xtext.ide
+Bundle-ManifestVersion: 2
+Bundle-Name: fr.unice.polytech.polycar.xtext.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: fr.unice.polytech.polycar.xtext.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: fr.unice.polytech.polycar.xtext,
+ fr.unice.polytech.polycar,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

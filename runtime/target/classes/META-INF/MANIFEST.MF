@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: PolyCar
+Bundle-SymbolicName: fr.unice.polytech.deantoni.vrep.polycar
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: vrepLibs/
+Export-Package: coppelia,
+ fr.unice.polytech.deantoni.vrep.polycar,
+ fr.unice.polytech.deantoni.vrep.polycar.utils
+Automatic-Module-Name: fr.unice.polytech.deantoni.vrep.polycar
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.yakindu.sct.generator.polytech.java;bundle-version="3.4.1"

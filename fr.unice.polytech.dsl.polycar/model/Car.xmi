@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fr.unice.polytech.dsl.polycar:Car
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:fr.unice.polytech.dsl.polycar="http://fr.unice.polytech.dsl.polycar"
+    xsi:schemaLocation="http://fr.unice.polytech.dsl.polycar polycar.ecore">
+  <itsActions/>
+  <itsActions/>
+</fr.unice.polytech.dsl.polycar:Car>

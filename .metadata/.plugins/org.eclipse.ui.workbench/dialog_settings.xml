@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="WorkbenchPreferenceDialogSettings">
+		<item value="531" key="DIALOG_X_ORIGIN"/>
+		<item value="169" key="DIALOG_Y_ORIGIN"/>
+	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
 		<item value="-1" key="dialogHeight"/>
 		<item value="-1" key="dialogWidth"/>
@@ -10,16 +14,6 @@
 		<list key="orderedProviders">
 		</list>
 		<list key="textArray">
-		</list>
-	</section>
-	<section name="NewWizardAction">
-		<item value="org.eclipse.gemoc.gemoc_language_workbench.ui.wizards.CreateNewGemocSequentialLanguageProject" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
-		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="org.eclipse.gemoc.xdsmlframework.category"/>
-			<item value="org.eclipse.gemoc.xdsmlframework.category/org.eclipse.gemoc.xdsmlframework.fragment.category"/>
-			<item value="org.eclipse.ui.Examples"/>
-			<item value="org.eclipse.ui.Examples/org.eclipse.gemoc.gemoc_language_workbench.samples.category"/>
-			<item value="org.eclipse.ui.Examples/org.eclipse.gemoc.gemoc_modeling_workbench.samples.category"/>
 		</list>
 	</section>
 </section>

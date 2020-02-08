@@ -75,10 +75,6 @@ public class PolyCar {
 	public FloatWA rightMapDetectedObject = new FloatWA(0);
 
 	
-
-	
-
-	
 	public PolyCar(String IP, int portNumber) {
 		clientID = vrep.simxStart(IP, portNumber, true, true, 5000, 5);
 		if (clientID == -1) {
@@ -86,6 +82,14 @@ public class PolyCar {
 		} else {
 			System.out.println("connected to the server....");
 		}
+
+		// Synchronize EVERYTHING
+		if (vrep.simxSynchronous(clientID, true) != 0) {
+			throw new RuntimeException("impossible to synchronize to V-REP simulator");
+		} else {
+			System.out.println("synchronized with the simulator....");
+		}
+
 		// Handle car !
 		vrep.simxGetObjectHandle(clientID, "polyCar", car, remoteApi.simx_opmode_blocking);
 		// Handle of the left motor
@@ -116,6 +120,12 @@ public class PolyCar {
 		
 		
 		System.out.println("ready to go ! ");
+	}
+
+	public void synchronize() {
+		if (vrep.simxSynchronousTrigger(clientID) != 0) {
+			throw new RuntimeException("impossible to synchronize operation");
+		}
 	}
 
 	/**

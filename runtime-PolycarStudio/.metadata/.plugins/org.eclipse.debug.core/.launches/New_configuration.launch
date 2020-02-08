@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.gemoc.execution.sequential.javaengine.ui.launcher">
+<intAttribute key="GEMOC_ANIMATE_DELAY" value="0"/>
+<stringAttribute key="GEMOC_DEBUG_MODEL_ID" value="org.eclipse.gemoc.execution.sequential.javaengine.ui.debugModel"/>
+<booleanAttribute key="GEMOC_LAUNCH_BREAK_START" value="false"/>
+<stringAttribute key="GEMOC_LAUNCH_INITIALIZATION_ARGUMENTS" value=""/>
+<stringAttribute key="GEMOC_LAUNCH_INITIALIZATION_METHOD" value=""/>
+<stringAttribute key="GEMOC_LAUNCH_MELANGE_QUERY" value=""/>
+<stringAttribute key="GEMOC_LAUNCH_SELECTED_LANGUAGE" value=""/>
+<booleanAttribute key="Generic MultiDimensional Data Trace" value="false"/>
+<stringAttribute key="LAUNCH_METHOD_ENTRY_POINT" value=""/>
+<stringAttribute key="LAUNCH_MODEL_ENTRY_POINT" value=""/>
+<stringAttribute key="Resource" value="/"/>
+<stringAttribute key="airdResource" value=""/>
+</launchConfiguration>

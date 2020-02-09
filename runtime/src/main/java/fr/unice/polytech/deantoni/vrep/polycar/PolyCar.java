@@ -75,10 +75,6 @@ public class PolyCar {
 	public FloatWA rightMapDetectedObject = new FloatWA(0);
 
 	
-
-	
-
-	
 	public PolyCar(String IP, int portNumber) {
 		clientID = vrep.simxStart(IP, portNumber, true, true, 5000, 5);
 		if (clientID == -1) {

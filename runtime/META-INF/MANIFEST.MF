@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: polycar
+Bundle-SymbolicName: polycar
+Bundle-Version: 1.0.0.qualifier
+Export-Package: coppelia,
+ fr.unice.polytech.deantoni.vrep.polycar,
+ fr.unice.polytech.deantoni.vrep.polycar.utils
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

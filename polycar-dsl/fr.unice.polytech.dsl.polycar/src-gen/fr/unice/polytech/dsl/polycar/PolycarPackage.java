@@ -243,13 +243,22 @@ public interface PolycarPackage extends EPackage {
 	int SUB_ACTION__VALUE = 1;
 
 	/**
+	 * The feature id for the '<em><b>Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUB_ACTION__DURATION = 2;
+
+	/**
 	 * The number of structural features of the '<em>Sub Action</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_ACTION_FEATURE_COUNT = 2;
+	int SUB_ACTION_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Sub Action</em>' class.
@@ -464,6 +473,17 @@ public interface PolycarPackage extends EPackage {
 	EAttribute getSubAction_Value();
 
 	/**
+	 * Returns the meta object for the attribute '{@link fr.unice.polytech.dsl.polycar.SubAction#getDuration <em>Duration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Duration</em>'.
+	 * @see fr.unice.polytech.dsl.polycar.SubAction#getDuration()
+	 * @see #getSubAction()
+	 * @generated
+	 */
+	EAttribute getSubAction_Duration();
+
+	/**
 	 * Returns the meta object for class '{@link fr.unice.polytech.dsl.polycar.EnvironmentEvent <em>Environment Event</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -651,6 +671,14 @@ public interface PolycarPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SUB_ACTION__VALUE = eINSTANCE.getSubAction_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Duration</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SUB_ACTION__DURATION = eINSTANCE.getSubAction_Duration();
 
 		/**
 		 * The meta object literal for the '{@link fr.unice.polytech.dsl.polycar.impl.EnvironmentEventImpl <em>Environment Event</em>}' class.

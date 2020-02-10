@@ -21,7 +21,8 @@
       <genEnumLiterals ecoreEnumLiteral="polycar.ecore#//EventType/FORB_FORWARD"/>
       <genEnumLiterals ecoreEnumLiteral="polycar.ecore#//EventType/FORB_LEFT"/>
       <genEnumLiterals ecoreEnumLiteral="polycar.ecore#//EventType/FORB_RIGHT"/>
-      <genEnumLiterals ecoreEnumLiteral="polycar.ecore#//EventType/OFF_THE_ROAD"/>
+      <genEnumLiterals ecoreEnumLiteral="polycar.ecore#//EventType/OFF_ROAD_LEFT"/>
+      <genEnumLiterals ecoreEnumLiteral="polycar.ecore#//EventType/OFF_ROAD_RIGHT"/>
     </genEnums>
     <genClasses image="false" ecoreClass="polycar.ecore#//NamedElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute polycar.ecore#//NamedElement/name"/>
@@ -38,6 +39,7 @@
     <genClasses ecoreClass="polycar.ecore#//SubAction">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute polycar.ecore#//SubAction/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute polycar.ecore#//SubAction/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute polycar.ecore#//SubAction/duration"/>
     </genClasses>
     <genClasses ecoreClass="polycar.ecore#//EnvironmentEvent">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute polycar.ecore#//EnvironmentEvent/type"/>

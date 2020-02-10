@@ -101,19 +101,10 @@ public class PolycarSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     SubAction returns SubAction
 	 *
 	 * Constraint:
-	 *     (type=ActionType value=EInt)
+	 *     (type=ActionType value=EInt duration=EInt?)
 	 */
 	protected void sequence_SubAction(ISerializationContext context, SubAction semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, PolycarPackage.Literals.SUB_ACTION__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PolycarPackage.Literals.SUB_ACTION__TYPE));
-			if (transientValues.isValueTransient(semanticObject, PolycarPackage.Literals.SUB_ACTION__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PolycarPackage.Literals.SUB_ACTION__VALUE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getSubActionAccess().getTypeActionTypeEnumRuleCall_1_1_0(), semanticObject.getType());
-		feeder.accept(grammarAccess.getSubActionAccess().getValueEIntParserRuleCall_1_3_0(), semanticObject.getValue());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

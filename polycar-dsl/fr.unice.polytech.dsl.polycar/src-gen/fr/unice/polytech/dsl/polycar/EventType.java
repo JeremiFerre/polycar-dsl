@@ -68,14 +68,23 @@ public enum EventType implements Enumerator {
 	 */
 	FORB_RIGHT(4, "FORB_RIGHT", "FORB_RIGHT"),
 	/**
-	 * The '<em><b>OFF THE ROAD</b></em>' literal object.
+	 * The '<em><b>OFF ROAD LEFT</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	 * @see #OFF_THE_ROAD_VALUE
+	 * <!-- end-user-doc -->
+	 * @see #OFF_ROAD_LEFT_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	OFF_THE_ROAD(5, "OFF_THE_ROAD", "OFF_THE_ROAD");
+	OFF_ROAD_LEFT(5, "OFF_ROAD_LEFT", "OFF_ROAD_LEFT"),
+	/**
+	 * The '<em><b>OFF ROAD RIGHT</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	 * @see #OFF_ROAD_RIGHT_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	OFF_ROAD_RIGHT(6, "OFF_ROAD_RIGHT", "OFF_ROAD_RIGHT");
 
 	/**
 	 * The '<em><b>TRAFFIC LIGHT ON</b></em>' literal value.
@@ -153,19 +162,34 @@ public enum EventType implements Enumerator {
 	public static final int FORB_RIGHT_VALUE = 4;
 
 	/**
-	 * The '<em><b>OFF THE ROAD</b></em>' literal value.
+	 * The '<em><b>OFF ROAD LEFT</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>OFF THE ROAD</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>OFF ROAD LEFT</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #OFF_THE_ROAD
+	 * @see #OFF_ROAD_LEFT
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int OFF_THE_ROAD_VALUE = 5;
+	public static final int OFF_ROAD_LEFT_VALUE = 5;
+
+	/**
+	 * The '<em><b>OFF ROAD RIGHT</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>OFF ROAD RIGHT</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #OFF_ROAD_RIGHT
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int OFF_ROAD_RIGHT_VALUE = 6;
 
 	/**
 	 * An array of all the '<em><b>Event Type</b></em>' enumerators.
@@ -174,7 +198,7 @@ public enum EventType implements Enumerator {
 	 * @generated
 	 */
 	private static final EventType[] VALUES_ARRAY = new EventType[] { TRAFFIC_LIGHT_ON, TRAFFIC_LIGHT_OFF, FORB_FORWARD,
-			FORB_LEFT, FORB_RIGHT, OFF_THE_ROAD, };
+			FORB_LEFT, FORB_RIGHT, OFF_ROAD_LEFT, OFF_ROAD_RIGHT, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Event Type</b></em>' enumerators.
@@ -240,8 +264,10 @@ public enum EventType implements Enumerator {
 			return FORB_LEFT;
 		case FORB_RIGHT_VALUE:
 			return FORB_RIGHT;
-		case OFF_THE_ROAD_VALUE:
-			return OFF_THE_ROAD;
+		case OFF_ROAD_LEFT_VALUE:
+			return OFF_ROAD_LEFT;
+		case OFF_ROAD_RIGHT_VALUE:
+			return OFF_ROAD_RIGHT;
 		}
 		return null;
 	}

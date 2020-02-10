@@ -219,18 +219,22 @@ public class PolycarGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cIsKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
 		private final Assignment cValueAssignment_1_3 = (Assignment)cGroup_1.eContents().get(3);
 		private final RuleCall cValueEIntParserRuleCall_1_3_0 = (RuleCall)cValueAssignment_1_3.eContents().get(0);
+		private final Group cGroup_1_4 = (Group)cGroup_1.eContents().get(4);
+		private final Keyword cDuringKeyword_1_4_0 = (Keyword)cGroup_1_4.eContents().get(0);
+		private final Assignment cDurationAssignment_1_4_1 = (Assignment)cGroup_1_4.eContents().get(1);
+		private final RuleCall cDurationEIntParserRuleCall_1_4_1_0 = (RuleCall)cDurationAssignment_1_4_1.eContents().get(0);
 		
 		//SubAction:
-		//	{SubAction} ('-' type=ActionType 'is' value=EInt);
+		//	{SubAction} ('-' type=ActionType 'is' value=EInt ('during' duration=EInt)?);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{SubAction} ('-' type=ActionType 'is' value=EInt)
+		//{SubAction} ('-' type=ActionType 'is' value=EInt ('during' duration=EInt)?)
 		public Group getGroup() { return cGroup; }
 		
 		//{SubAction}
 		public Action getSubActionAction_0() { return cSubActionAction_0; }
 		
-		//'-' type=ActionType 'is' value=EInt
+		//'-' type=ActionType 'is' value=EInt ('during' duration=EInt)?
 		public Group getGroup_1() { return cGroup_1; }
 		
 		//'-'
@@ -250,6 +254,18 @@ public class PolycarGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//EInt
 		public RuleCall getValueEIntParserRuleCall_1_3_0() { return cValueEIntParserRuleCall_1_3_0; }
+		
+		//('during' duration=EInt)?
+		public Group getGroup_1_4() { return cGroup_1_4; }
+		
+		//'during'
+		public Keyword getDuringKeyword_1_4_0() { return cDuringKeyword_1_4_0; }
+		
+		//duration=EInt
+		public Assignment getDurationAssignment_1_4_1() { return cDurationAssignment_1_4_1; }
+		
+		//EInt
+		public RuleCall getDurationEIntParserRuleCall_1_4_1_0() { return cDurationEIntParserRuleCall_1_4_1_0; }
 	}
 	public class EStringElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.unice.polytech.dsl.Polycar.EString");
@@ -291,20 +307,22 @@ public class PolycarGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cFORB_LEFTFORB_LEFTKeyword_1_0 = (Keyword)cFORB_LEFTEnumLiteralDeclaration_1.eContents().get(0);
 		private final EnumLiteralDeclaration cFORB_RIGHTEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
 		private final Keyword cFORB_RIGHTFORB_RIGHTKeyword_2_0 = (Keyword)cFORB_RIGHTEnumLiteralDeclaration_2.eContents().get(0);
-		private final EnumLiteralDeclaration cOFF_THE_ROADEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
-		private final Keyword cOFF_THE_ROADOFF_THE_ROADKeyword_3_0 = (Keyword)cOFF_THE_ROADEnumLiteralDeclaration_3.eContents().get(0);
-		private final EnumLiteralDeclaration cTRAFFIC_LIGHT_OFFEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
-		private final Keyword cTRAFFIC_LIGHT_OFFTRAFFIC_LIGHT_OFFKeyword_4_0 = (Keyword)cTRAFFIC_LIGHT_OFFEnumLiteralDeclaration_4.eContents().get(0);
-		private final EnumLiteralDeclaration cTRAFFIC_LIGHT_ONEnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
-		private final Keyword cTRAFFIC_LIGHT_ONTRAFFIC_LIGHT_ONKeyword_5_0 = (Keyword)cTRAFFIC_LIGHT_ONEnumLiteralDeclaration_5.eContents().get(0);
+		private final EnumLiteralDeclaration cOFF_ROAD_LEFTEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
+		private final Keyword cOFF_ROAD_LEFTOFF_ROAD_LEFTKeyword_3_0 = (Keyword)cOFF_ROAD_LEFTEnumLiteralDeclaration_3.eContents().get(0);
+		private final EnumLiteralDeclaration cOFF_ROAD_RIGHTEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
+		private final Keyword cOFF_ROAD_RIGHTOFF_ROAD_RIGHTKeyword_4_0 = (Keyword)cOFF_ROAD_RIGHTEnumLiteralDeclaration_4.eContents().get(0);
+		private final EnumLiteralDeclaration cTRAFFIC_LIGHT_OFFEnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
+		private final Keyword cTRAFFIC_LIGHT_OFFTRAFFIC_LIGHT_OFFKeyword_5_0 = (Keyword)cTRAFFIC_LIGHT_OFFEnumLiteralDeclaration_5.eContents().get(0);
+		private final EnumLiteralDeclaration cTRAFFIC_LIGHT_ONEnumLiteralDeclaration_6 = (EnumLiteralDeclaration)cAlternatives.eContents().get(6);
+		private final Keyword cTRAFFIC_LIGHT_ONTRAFFIC_LIGHT_ONKeyword_6_0 = (Keyword)cTRAFFIC_LIGHT_ONEnumLiteralDeclaration_6.eContents().get(0);
 		
 		//enum EventType:
 		//	FORB_FORWARD | FORB_LEFT |
-		//	FORB_RIGHT | OFF_THE_ROAD |
+		//	FORB_RIGHT | OFF_ROAD_LEFT | OFF_ROAD_RIGHT |
 		//	TRAFFIC_LIGHT_OFF | TRAFFIC_LIGHT_ON;
 		public EnumRule getRule() { return rule; }
 		
-		//FORB_FORWARD | FORB_LEFT | FORB_RIGHT | OFF_THE_ROAD | TRAFFIC_LIGHT_OFF | TRAFFIC_LIGHT_ON
+		//FORB_FORWARD | FORB_LEFT | FORB_RIGHT | OFF_ROAD_LEFT | OFF_ROAD_RIGHT | TRAFFIC_LIGHT_OFF | TRAFFIC_LIGHT_ON
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//FORB_FORWARD
@@ -325,23 +343,29 @@ public class PolycarGrammarAccess extends AbstractGrammarElementFinder {
 		//'FORB_RIGHT'
 		public Keyword getFORB_RIGHTFORB_RIGHTKeyword_2_0() { return cFORB_RIGHTFORB_RIGHTKeyword_2_0; }
 		
-		//OFF_THE_ROAD
-		public EnumLiteralDeclaration getOFF_THE_ROADEnumLiteralDeclaration_3() { return cOFF_THE_ROADEnumLiteralDeclaration_3; }
+		//OFF_ROAD_LEFT
+		public EnumLiteralDeclaration getOFF_ROAD_LEFTEnumLiteralDeclaration_3() { return cOFF_ROAD_LEFTEnumLiteralDeclaration_3; }
 		
-		//'OFF_THE_ROAD'
-		public Keyword getOFF_THE_ROADOFF_THE_ROADKeyword_3_0() { return cOFF_THE_ROADOFF_THE_ROADKeyword_3_0; }
+		//'OFF_ROAD_LEFT'
+		public Keyword getOFF_ROAD_LEFTOFF_ROAD_LEFTKeyword_3_0() { return cOFF_ROAD_LEFTOFF_ROAD_LEFTKeyword_3_0; }
+		
+		//OFF_ROAD_RIGHT
+		public EnumLiteralDeclaration getOFF_ROAD_RIGHTEnumLiteralDeclaration_4() { return cOFF_ROAD_RIGHTEnumLiteralDeclaration_4; }
+		
+		//'OFF_ROAD_RIGHT'
+		public Keyword getOFF_ROAD_RIGHTOFF_ROAD_RIGHTKeyword_4_0() { return cOFF_ROAD_RIGHTOFF_ROAD_RIGHTKeyword_4_0; }
 		
 		//TRAFFIC_LIGHT_OFF
-		public EnumLiteralDeclaration getTRAFFIC_LIGHT_OFFEnumLiteralDeclaration_4() { return cTRAFFIC_LIGHT_OFFEnumLiteralDeclaration_4; }
+		public EnumLiteralDeclaration getTRAFFIC_LIGHT_OFFEnumLiteralDeclaration_5() { return cTRAFFIC_LIGHT_OFFEnumLiteralDeclaration_5; }
 		
 		//'TRAFFIC_LIGHT_OFF'
-		public Keyword getTRAFFIC_LIGHT_OFFTRAFFIC_LIGHT_OFFKeyword_4_0() { return cTRAFFIC_LIGHT_OFFTRAFFIC_LIGHT_OFFKeyword_4_0; }
+		public Keyword getTRAFFIC_LIGHT_OFFTRAFFIC_LIGHT_OFFKeyword_5_0() { return cTRAFFIC_LIGHT_OFFTRAFFIC_LIGHT_OFFKeyword_5_0; }
 		
 		//TRAFFIC_LIGHT_ON
-		public EnumLiteralDeclaration getTRAFFIC_LIGHT_ONEnumLiteralDeclaration_5() { return cTRAFFIC_LIGHT_ONEnumLiteralDeclaration_5; }
+		public EnumLiteralDeclaration getTRAFFIC_LIGHT_ONEnumLiteralDeclaration_6() { return cTRAFFIC_LIGHT_ONEnumLiteralDeclaration_6; }
 		
 		//'TRAFFIC_LIGHT_ON'
-		public Keyword getTRAFFIC_LIGHT_ONTRAFFIC_LIGHT_ONKeyword_5_0() { return cTRAFFIC_LIGHT_ONTRAFFIC_LIGHT_ONKeyword_5_0; }
+		public Keyword getTRAFFIC_LIGHT_ONTRAFFIC_LIGHT_ONKeyword_6_0() { return cTRAFFIC_LIGHT_ONTRAFFIC_LIGHT_ONKeyword_6_0; }
 	}
 	public class ActionTypeElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "fr.unice.polytech.dsl.Polycar.ActionType");
@@ -476,7 +500,7 @@ public class PolycarGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//SubAction:
-	//	{SubAction} ('-' type=ActionType 'is' value=EInt);
+	//	{SubAction} ('-' type=ActionType 'is' value=EInt ('during' duration=EInt)?);
 	public SubActionElements getSubActionAccess() {
 		return pSubAction;
 	}
@@ -487,7 +511,7 @@ public class PolycarGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//enum EventType:
 	//	FORB_FORWARD | FORB_LEFT |
-	//	FORB_RIGHT | OFF_THE_ROAD |
+	//	FORB_RIGHT | OFF_ROAD_LEFT | OFF_ROAD_RIGHT |
 	//	TRAFFIC_LIGHT_OFF | TRAFFIC_LIGHT_ON;
 	public EventTypeElements getEventTypeAccess() {
 		return eEventType;

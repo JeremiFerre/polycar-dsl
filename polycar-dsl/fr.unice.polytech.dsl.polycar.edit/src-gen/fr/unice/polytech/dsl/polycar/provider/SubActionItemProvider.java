@@ -56,6 +56,7 @@ public class SubActionItemProvider extends ItemProviderAdapter implements IEditi
 
 			addTypePropertyDescriptor(object);
 			addValuePropertyDescriptor(object);
+			addDurationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -89,6 +90,22 @@ public class SubActionItemProvider extends ItemProviderAdapter implements IEditi
 						getString("_UI_PropertyDescriptor_description", "_UI_SubAction_value_feature",
 								"_UI_SubAction_type"),
 						PolycarPackage.Literals.SUB_ACTION__VALUE, true, false, false,
+						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Duration feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDurationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_SubAction_duration_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_SubAction_duration_feature",
+								"_UI_SubAction_type"),
+						PolycarPackage.Literals.SUB_ACTION__DURATION, true, false, false,
 						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
 	}
 
@@ -141,6 +158,7 @@ public class SubActionItemProvider extends ItemProviderAdapter implements IEditi
 		switch (notification.getFeatureID(SubAction.class)) {
 		case PolycarPackage.SUB_ACTION__TYPE:
 		case PolycarPackage.SUB_ACTION__VALUE:
+		case PolycarPackage.SUB_ACTION__DURATION:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

@@ -434,6 +434,31 @@ ruleSubAction returns [EObject current=null]
 					}
 				)
 			)
+			(
+				otherlv_5='during'
+				{
+					newLeafNode(otherlv_5, grammarAccess.getSubActionAccess().getDuringKeyword_1_4_0());
+				}
+				(
+					(
+						{
+							newCompositeNode(grammarAccess.getSubActionAccess().getDurationEIntParserRuleCall_1_4_1_0());
+						}
+						lv_duration_6_0=ruleEInt
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getSubActionRule());
+							}
+							set(
+								$current,
+								"duration",
+								lv_duration_6_0,
+								"fr.unice.polytech.dsl.Polycar.EInt");
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
+			)?
 		)
 	)
 ;
@@ -530,26 +555,34 @@ ruleEventType returns [Enumerator current=null]
 		)
 		    |
 		(
-			enumLiteral_3='OFF_THE_ROAD'
+			enumLiteral_3='OFF_ROAD_LEFT'
 			{
-				$current = grammarAccess.getEventTypeAccess().getOFF_THE_ROADEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_3, grammarAccess.getEventTypeAccess().getOFF_THE_ROADEnumLiteralDeclaration_3());
+				$current = grammarAccess.getEventTypeAccess().getOFF_ROAD_LEFTEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_3, grammarAccess.getEventTypeAccess().getOFF_ROAD_LEFTEnumLiteralDeclaration_3());
 			}
 		)
 		    |
 		(
-			enumLiteral_4='TRAFFIC_LIGHT_OFF'
+			enumLiteral_4='OFF_ROAD_RIGHT'
 			{
-				$current = grammarAccess.getEventTypeAccess().getTRAFFIC_LIGHT_OFFEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_4, grammarAccess.getEventTypeAccess().getTRAFFIC_LIGHT_OFFEnumLiteralDeclaration_4());
+				$current = grammarAccess.getEventTypeAccess().getOFF_ROAD_RIGHTEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_4, grammarAccess.getEventTypeAccess().getOFF_ROAD_RIGHTEnumLiteralDeclaration_4());
 			}
 		)
 		    |
 		(
-			enumLiteral_5='TRAFFIC_LIGHT_ON'
+			enumLiteral_5='TRAFFIC_LIGHT_OFF'
 			{
-				$current = grammarAccess.getEventTypeAccess().getTRAFFIC_LIGHT_ONEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_5, grammarAccess.getEventTypeAccess().getTRAFFIC_LIGHT_ONEnumLiteralDeclaration_5());
+				$current = grammarAccess.getEventTypeAccess().getTRAFFIC_LIGHT_OFFEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_5, grammarAccess.getEventTypeAccess().getTRAFFIC_LIGHT_OFFEnumLiteralDeclaration_5());
+			}
+		)
+		    |
+		(
+			enumLiteral_6='TRAFFIC_LIGHT_ON'
+			{
+				$current = grammarAccess.getEventTypeAccess().getTRAFFIC_LIGHT_ONEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_6, grammarAccess.getEventTypeAccess().getTRAFFIC_LIGHT_ONEnumLiteralDeclaration_6());
 			}
 		)
 	)

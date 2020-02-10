@@ -24,6 +24,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="SubAction">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ActionType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="duration" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EnvironmentEvent">
     <eOperations name="react"/>
@@ -37,6 +38,7 @@
     <eLiterals name="FORB_FORWARD" value="2"/>
     <eLiterals name="FORB_LEFT" value="3"/>
     <eLiterals name="FORB_RIGHT" value="4"/>
-    <eLiterals name="OFF_THE_ROAD" value="5"/>
+    <eLiterals name="OFF_ROAD_LEFT" value="5" literal="OFF_ROAD_LEFT"/>
+    <eLiterals name="OFF_ROAD_RIGHT" value="6"/>
   </eClassifiers>
 </ecore:EPackage>

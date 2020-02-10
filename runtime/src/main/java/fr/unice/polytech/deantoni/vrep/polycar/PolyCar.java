@@ -82,6 +82,11 @@ public class PolyCar {
 		} else {
 			System.out.println("connected to the server....");
 		}
+		
+		if (vrep.simxSynchronous(clientID, true) != 0) {
+			throw new RuntimeException("Failed to initialize synchronous");
+		}
+		
 		// Handle car !
 		vrep.simxGetObjectHandle(clientID, "polyCar", car, remoteApi.simx_opmode_blocking);
 		// Handle of the left motor
@@ -112,6 +117,12 @@ public class PolyCar {
 		
 		
 		System.out.println("ready to go ! ");
+	}
+	
+	public void synchronize() {
+		if (vrep.simxSynchronousTrigger(clientID) != 0) {
+			throw new RuntimeException("Failed to synchronize trigger");
+		}
 	}
 
 	/**
@@ -289,6 +300,14 @@ public class PolyCar {
 		turnRight(speed);
 		sleep(duration);
 		turnRight(0);
+	}
+	
+	public void setLeftSpeed(int speed) {
+		vrep.simxSetJointTargetVelocity(clientID, leftMotor.getValue(), (float) speed, remoteApi.simx_opmode_streaming);
+	}
+	
+	public void setRightSpeed(int speed) {
+		vrep.simxSetJointTargetVelocity(clientID, rightMotor.getValue(), (float) speed, remoteApi.simx_opmode_streaming);
 	}
 
 	public void turnLeft(int speed) {

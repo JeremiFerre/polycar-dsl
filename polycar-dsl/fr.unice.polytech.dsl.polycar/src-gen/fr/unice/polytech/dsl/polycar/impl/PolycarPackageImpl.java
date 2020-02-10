@@ -254,6 +254,15 @@ public class PolycarPackageImpl extends EPackageImpl implements PolycarPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getSubAction_Duration() {
+		return (EAttribute) subActionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getEnvironmentEvent() {
 		return environmentEventEClass;
 	}
@@ -347,6 +356,7 @@ public class PolycarPackageImpl extends EPackageImpl implements PolycarPackage {
 		subActionEClass = createEClass(SUB_ACTION);
 		createEAttribute(subActionEClass, SUB_ACTION__TYPE);
 		createEAttribute(subActionEClass, SUB_ACTION__VALUE);
+		createEAttribute(subActionEClass, SUB_ACTION__DURATION);
 
 		environmentEventEClass = createEClass(ENVIRONMENT_EVENT);
 		createEAttribute(environmentEventEClass, ENVIRONMENT_EVENT__TYPE);
@@ -419,6 +429,8 @@ public class PolycarPackageImpl extends EPackageImpl implements PolycarPackage {
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSubAction_Value(), ecorePackage.getEInt(), "value", null, 0, 1, SubAction.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSubAction_Duration(), ecorePackage.getEInt(), "duration", null, 0, 1, SubAction.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(environmentEventEClass, EnvironmentEvent.class, "EnvironmentEvent", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -442,7 +454,8 @@ public class PolycarPackageImpl extends EPackageImpl implements PolycarPackage {
 		addEEnumLiteral(eventTypeEEnum, EventType.FORB_FORWARD);
 		addEEnumLiteral(eventTypeEEnum, EventType.FORB_LEFT);
 		addEEnumLiteral(eventTypeEEnum, EventType.FORB_RIGHT);
-		addEEnumLiteral(eventTypeEEnum, EventType.OFF_THE_ROAD);
+		addEEnumLiteral(eventTypeEEnum, EventType.OFF_ROAD_LEFT);
+		addEEnumLiteral(eventTypeEEnum, EventType.OFF_ROAD_RIGHT);
 
 		// Create resource
 		createResource(eNS_URI);

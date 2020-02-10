@@ -29,12 +29,12 @@ EnvironmentEvent returns EnvironmentEvent:
 	   
 SubAction returns SubAction:
 	{SubAction}
-	('-' type=ActionType 'is' value=EInt);
+	('-' type=ActionType 'is' value=EInt ('during' duration=EInt)?);
 	
 
 enum EventType returns EventType:
 				FORB_FORWARD='FORB_FORWARD' | FORB_LEFT='FORB_LEFT' |
-				 FORB_RIGHT='FORB_RIGHT' | OFF_THE_ROAD='OFF_THE_ROAD'|
+				 FORB_RIGHT='FORB_RIGHT' | OFF_ROAD_LEFT='OFF_ROAD_LEFT'| OFF_ROAD_RIGHT='OFF_ROAD_RIGHT'|
 				 TRAFFIC_LIGHT_OFF='TRAFFIC_LIGHT_OFF' | TRAFFIC_LIGHT_ON='TRAFFIC_LIGHT_ON';
 				
 enum ActionType returns ActionType:

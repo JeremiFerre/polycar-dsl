@@ -276,21 +276,27 @@ rule__EventType__Alternatives
 	)
 	|
 	(
-		{ before(grammarAccess.getEventTypeAccess().getOFF_THE_ROADEnumLiteralDeclaration_3()); }
-		('OFF_THE_ROAD')
-		{ after(grammarAccess.getEventTypeAccess().getOFF_THE_ROADEnumLiteralDeclaration_3()); }
+		{ before(grammarAccess.getEventTypeAccess().getOFF_ROAD_LEFTEnumLiteralDeclaration_3()); }
+		('OFF_ROAD_LEFT')
+		{ after(grammarAccess.getEventTypeAccess().getOFF_ROAD_LEFTEnumLiteralDeclaration_3()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getEventTypeAccess().getTRAFFIC_LIGHT_OFFEnumLiteralDeclaration_4()); }
+		{ before(grammarAccess.getEventTypeAccess().getOFF_ROAD_RIGHTEnumLiteralDeclaration_4()); }
+		('OFF_ROAD_RIGHT')
+		{ after(grammarAccess.getEventTypeAccess().getOFF_ROAD_RIGHTEnumLiteralDeclaration_4()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getEventTypeAccess().getTRAFFIC_LIGHT_OFFEnumLiteralDeclaration_5()); }
 		('TRAFFIC_LIGHT_OFF')
-		{ after(grammarAccess.getEventTypeAccess().getTRAFFIC_LIGHT_OFFEnumLiteralDeclaration_4()); }
+		{ after(grammarAccess.getEventTypeAccess().getTRAFFIC_LIGHT_OFFEnumLiteralDeclaration_5()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getEventTypeAccess().getTRAFFIC_LIGHT_ONEnumLiteralDeclaration_5()); }
+		{ before(grammarAccess.getEventTypeAccess().getTRAFFIC_LIGHT_ONEnumLiteralDeclaration_6()); }
 		('TRAFFIC_LIGHT_ON')
-		{ after(grammarAccess.getEventTypeAccess().getTRAFFIC_LIGHT_ONEnumLiteralDeclaration_5()); }
+		{ after(grammarAccess.getEventTypeAccess().getTRAFFIC_LIGHT_ONEnumLiteralDeclaration_6()); }
 	)
 ;
 finally {
@@ -1086,6 +1092,7 @@ rule__SubAction__Group_1__3
 	}
 :
 	rule__SubAction__Group_1__3__Impl
+	rule__SubAction__Group_1__4
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -1100,6 +1107,86 @@ rule__SubAction__Group_1__3__Impl
 	{ before(grammarAccess.getSubActionAccess().getValueAssignment_1_3()); }
 	(rule__SubAction__ValueAssignment_1_3)
 	{ after(grammarAccess.getSubActionAccess().getValueAssignment_1_3()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__SubAction__Group_1__4
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__SubAction__Group_1__4__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__SubAction__Group_1__4__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getSubActionAccess().getGroup_1_4()); }
+	(rule__SubAction__Group_1_4__0)?
+	{ after(grammarAccess.getSubActionAccess().getGroup_1_4()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__SubAction__Group_1_4__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__SubAction__Group_1_4__0__Impl
+	rule__SubAction__Group_1_4__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__SubAction__Group_1_4__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getSubActionAccess().getDuringKeyword_1_4_0()); }
+	'during'
+	{ after(grammarAccess.getSubActionAccess().getDuringKeyword_1_4_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__SubAction__Group_1_4__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__SubAction__Group_1_4__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__SubAction__Group_1_4__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getSubActionAccess().getDurationAssignment_1_4_1()); }
+	(rule__SubAction__DurationAssignment_1_4_1)
+	{ after(grammarAccess.getSubActionAccess().getDurationAssignment_1_4_1()); }
 )
 ;
 finally {
@@ -1285,6 +1372,21 @@ rule__SubAction__ValueAssignment_1_3
 		{ before(grammarAccess.getSubActionAccess().getValueEIntParserRuleCall_1_3_0()); }
 		ruleEInt
 		{ after(grammarAccess.getSubActionAccess().getValueEIntParserRuleCall_1_3_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__SubAction__DurationAssignment_1_4_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getSubActionAccess().getDurationEIntParserRuleCall_1_4_1_0()); }
+		ruleEInt
+		{ after(grammarAccess.getSubActionAccess().getDurationEIntParserRuleCall_1_4_1_0()); }
 	)
 ;
 finally {

@@ -40,6 +40,7 @@ public class PolycarParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEnvironmentEventAccess().getGroup_1(), "rule__EnvironmentEvent__Group_1__0");
 			builder.put(grammarAccess.getSubActionAccess().getGroup(), "rule__SubAction__Group__0");
 			builder.put(grammarAccess.getSubActionAccess().getGroup_1(), "rule__SubAction__Group_1__0");
+			builder.put(grammarAccess.getSubActionAccess().getGroup_1_4(), "rule__SubAction__Group_1_4__0");
 			builder.put(grammarAccess.getCarAccess().getNameAssignment_2(), "rule__Car__NameAssignment_2");
 			builder.put(grammarAccess.getCarAccess().getActionsAssignment_5(), "rule__Car__ActionsAssignment_5");
 			builder.put(grammarAccess.getCarAccess().getActionsAssignment_6(), "rule__Car__ActionsAssignment_6");
@@ -52,6 +53,7 @@ public class PolycarParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEnvironmentEventAccess().getActionAssignment_1_3(), "rule__EnvironmentEvent__ActionAssignment_1_3");
 			builder.put(grammarAccess.getSubActionAccess().getTypeAssignment_1_1(), "rule__SubAction__TypeAssignment_1_1");
 			builder.put(grammarAccess.getSubActionAccess().getValueAssignment_1_3(), "rule__SubAction__ValueAssignment_1_3");
+			builder.put(grammarAccess.getSubActionAccess().getDurationAssignment_1_4_1(), "rule__SubAction__DurationAssignment_1_4_1");
 		}
 	}
 	

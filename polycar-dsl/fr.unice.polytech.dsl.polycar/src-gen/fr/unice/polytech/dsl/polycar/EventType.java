@@ -117,23 +117,25 @@ public enum EventType implements Enumerator {
 	 * @ordered
 	 */
 	OBJECT_MIDDLE(9, "OBJECT_MIDDLE", "OBJECT_MIDDLE"),
+
 	/**
-	* The '<em><b>CAN GO LEFT</b></em>' literal object.
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @see #CAN_GO_LEFT_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * The '<em><b>CAN GO LEFT</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #CAN_GO_LEFT_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	CAN_GO_LEFT(10, "CAN_GO_LEFT", "CAN_GO_LEFT"),
+
 	/**
-	* The '<em><b>CAN GO RIGHT</b></em>' literal object.
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @see #CAN_GO_RIGHT_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * The '<em><b>CAN GO RIGHT</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #CAN_GO_RIGHT_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	CAN_GO_RIGHT(11, "CAN_GO_RIGHT", "CAN_GO_RIGHT");
 
 	/**

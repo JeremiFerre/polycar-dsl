@@ -5,6 +5,7 @@ package fr.unice.polytech.dsl.polycar.impl;
 import fr.unice.polytech.dsl.polycar.Action;
 import fr.unice.polytech.dsl.polycar.ActionType;
 import fr.unice.polytech.dsl.polycar.Car;
+import fr.unice.polytech.dsl.polycar.Condition;
 import fr.unice.polytech.dsl.polycar.EnvironmentEvent;
 import fr.unice.polytech.dsl.polycar.EventType;
 import fr.unice.polytech.dsl.polycar.NamedElement;
@@ -62,6 +63,13 @@ public class PolycarPackageImpl extends EPackageImpl implements PolycarPackage {
 	 * @generated
 	 */
 	private EClass environmentEventEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass conditionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -191,17 +199,8 @@ public class PolycarPackageImpl extends EPackageImpl implements PolycarPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCar_EnvironmentEvents() {
-		return (EReference) carEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getCar_LeftMotor() {
-		return (EAttribute) carEClass.getEStructuralFeatures().get(3);
+		return (EAttribute) carEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -210,6 +209,15 @@ public class PolycarPackageImpl extends EPackageImpl implements PolycarPackage {
 	 * @generated
 	 */
 	public EReference getCar_DefaultAction() {
+		return (EReference) carEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCar_Conditions() {
 		return (EReference) carEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -290,8 +298,8 @@ public class PolycarPackageImpl extends EPackageImpl implements PolycarPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEnvironmentEvent_Action() {
-		return (EReference) environmentEventEClass.getEStructuralFeatures().get(1);
+	public EOperation getEnvironmentEvent__React() {
+		return environmentEventEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -299,8 +307,26 @@ public class PolycarPackageImpl extends EPackageImpl implements PolycarPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEnvironmentEvent__React() {
-		return environmentEventEClass.getEOperations().get(0);
+	public EClass getCondition() {
+		return conditionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCondition_EnvironmentEvents() {
+		return (EReference) conditionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCondition_Action() {
+		return (EReference) conditionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -356,9 +382,9 @@ public class PolycarPackageImpl extends EPackageImpl implements PolycarPackage {
 		carEClass = createEClass(CAR);
 		createEReference(carEClass, CAR__ACTIONS);
 		createEAttribute(carEClass, CAR__RIGHT_MOTOR);
-		createEReference(carEClass, CAR__ENVIRONMENT_EVENTS);
 		createEAttribute(carEClass, CAR__LEFT_MOTOR);
 		createEReference(carEClass, CAR__DEFAULT_ACTION);
+		createEReference(carEClass, CAR__CONDITIONS);
 
 		actionEClass = createEClass(ACTION);
 		createEReference(actionEClass, ACTION__SUB_ACTIONS);
@@ -370,8 +396,11 @@ public class PolycarPackageImpl extends EPackageImpl implements PolycarPackage {
 
 		environmentEventEClass = createEClass(ENVIRONMENT_EVENT);
 		createEAttribute(environmentEventEClass, ENVIRONMENT_EVENT__TYPE);
-		createEReference(environmentEventEClass, ENVIRONMENT_EVENT__ACTION);
 		createEOperation(environmentEventEClass, ENVIRONMENT_EVENT___REACT);
+
+		conditionEClass = createEClass(CONDITION);
+		createEReference(conditionEClass, CONDITION__ENVIRONMENT_EVENTS);
+		createEReference(conditionEClass, CONDITION__ACTION);
 
 		// Create enums
 		actionTypeEEnum = createEEnum(ACTION_TYPE);
@@ -422,13 +451,13 @@ public class PolycarPackageImpl extends EPackageImpl implements PolycarPackage {
 				IS_ORDERED);
 		initEAttribute(getCar_RightMotor(), ecorePackage.getEInt(), "rightMotor", null, 0, 1, Car.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCar_EnvironmentEvents(), this.getEnvironmentEvent(), null, "environmentEvents", null, 0, -1,
-				Car.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCar_LeftMotor(), ecorePackage.getEInt(), "leftMotor", null, 0, 1, Car.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCar_DefaultAction(), this.getAction(), null, "defaultAction", null, 0, 1, Car.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCar_Conditions(), this.getCondition(), null, "conditions", null, 0, -1, Car.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(actionEClass, Action.class, "Action", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -449,11 +478,17 @@ public class PolycarPackageImpl extends EPackageImpl implements PolycarPackage {
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEnvironmentEvent_Type(), this.getEventType(), "type", null, 0, 1, EnvironmentEvent.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEnvironmentEvent_Action(), this.getAction(), null, "action", null, 1, 1,
-				EnvironmentEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getEnvironmentEvent__React(), null, "react", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(conditionEClass, Condition.class, "Condition", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCondition_EnvironmentEvents(), this.getEnvironmentEvent(), null, "environmentEvents", null, 0,
+				-1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCondition_Action(), this.getAction(), null, "action", null, 1, 1, Condition.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(actionTypeEEnum, ActionType.class, "ActionType");

@@ -65,6 +65,8 @@ public class PolycarFactoryImpl extends EFactoryImpl implements PolycarFactory {
 			return createSubAction();
 		case PolycarPackage.ENVIRONMENT_EVENT:
 			return createEnvironmentEvent();
+		case PolycarPackage.CONDITION:
+			return createCondition();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -142,6 +144,16 @@ public class PolycarFactoryImpl extends EFactoryImpl implements PolycarFactory {
 	public EnvironmentEvent createEnvironmentEvent() {
 		EnvironmentEventImpl environmentEvent = new EnvironmentEventImpl();
 		return environmentEvent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Condition createCondition() {
+		ConditionImpl condition = new ConditionImpl();
+		return condition;
 	}
 
 	/**

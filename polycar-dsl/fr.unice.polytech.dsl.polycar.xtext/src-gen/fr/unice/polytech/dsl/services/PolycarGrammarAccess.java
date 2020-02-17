@@ -42,10 +42,10 @@ public class PolycarGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cActionsActionParserRuleCall_6_0 = (RuleCall)cActionsAssignment_6.eContents().get(0);
 		private final Keyword cEnvironmentsKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Keyword cColonKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		private final Assignment cEnvironmentEventsAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final RuleCall cEnvironmentEventsEnvironmentEventParserRuleCall_9_0 = (RuleCall)cEnvironmentEventsAssignment_9.eContents().get(0);
-		private final Assignment cEnvironmentEventsAssignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final RuleCall cEnvironmentEventsEnvironmentEventParserRuleCall_10_0 = (RuleCall)cEnvironmentEventsAssignment_10.eContents().get(0);
+		private final Assignment cConditionsAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cConditionsConditionParserRuleCall_9_0 = (RuleCall)cConditionsAssignment_9.eContents().get(0);
+		private final Assignment cConditionsAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cConditionsConditionParserRuleCall_10_0 = (RuleCall)cConditionsAssignment_10.eContents().get(0);
 		private final Keyword cRUNKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		private final Assignment cDefaultActionAssignment_12 = (Assignment)cGroup.eContents().get(12);
 		private final CrossReference cDefaultActionActionCrossReference_12_0 = (CrossReference)cDefaultActionAssignment_12.eContents().get(0);
@@ -59,13 +59,13 @@ public class PolycarGrammarAccess extends AbstractGrammarElementFinder {
 		//	actions+=Action
 		//	actions+=Action*
 		//	'environments' ':'
-		//	environmentEvents+=EnvironmentEvent
-		//	environmentEvents+=EnvironmentEvent*
+		//	conditions+=Condition
+		//	conditions+=Condition*
 		//	'RUN' defaultAction=[Action]?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Car} 'Car' name=EString 'actions' ':' actions+=Action actions+=Action* 'environments' ':'
-		//environmentEvents+=EnvironmentEvent environmentEvents+=EnvironmentEvent* 'RUN' defaultAction=[Action]?
+		//{Car} 'Car' name=EString 'actions' ':' actions+=Action actions+=Action* 'environments' ':' conditions+=Condition
+		//conditions+=Condition* 'RUN' defaultAction=[Action]?
 		public Group getGroup() { return cGroup; }
 		
 		//{Car}
@@ -104,17 +104,17 @@ public class PolycarGrammarAccess extends AbstractGrammarElementFinder {
 		//':'
 		public Keyword getColonKeyword_8() { return cColonKeyword_8; }
 		
-		//environmentEvents+=EnvironmentEvent
-		public Assignment getEnvironmentEventsAssignment_9() { return cEnvironmentEventsAssignment_9; }
+		//conditions+=Condition
+		public Assignment getConditionsAssignment_9() { return cConditionsAssignment_9; }
 		
-		//EnvironmentEvent
-		public RuleCall getEnvironmentEventsEnvironmentEventParserRuleCall_9_0() { return cEnvironmentEventsEnvironmentEventParserRuleCall_9_0; }
+		//Condition
+		public RuleCall getConditionsConditionParserRuleCall_9_0() { return cConditionsConditionParserRuleCall_9_0; }
 		
-		//environmentEvents+=EnvironmentEvent*
-		public Assignment getEnvironmentEventsAssignment_10() { return cEnvironmentEventsAssignment_10; }
+		//conditions+=Condition*
+		public Assignment getConditionsAssignment_10() { return cConditionsAssignment_10; }
 		
-		//EnvironmentEvent
-		public RuleCall getEnvironmentEventsEnvironmentEventParserRuleCall_10_0() { return cEnvironmentEventsEnvironmentEventParserRuleCall_10_0; }
+		//Condition
+		public RuleCall getConditionsConditionParserRuleCall_10_0() { return cConditionsConditionParserRuleCall_10_0; }
 		
 		//'RUN'
 		public Keyword getRUNKeyword_11() { return cRUNKeyword_11; }
@@ -127,6 +127,71 @@ public class PolycarGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//ID
 		public RuleCall getDefaultActionActionIDTerminalRuleCall_12_0_1() { return cDefaultActionActionIDTerminalRuleCall_12_0_1; }
+	}
+	public class ConditionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.unice.polytech.dsl.Polycar.Condition");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cConditionAction_0 = (Action)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cHyphenMinusKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cEnvironmentEventsAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cEnvironmentEventsEnvironmentEventParserRuleCall_1_1_0 = (RuleCall)cEnvironmentEventsAssignment_1_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cAndKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cEnvironmentEventsAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cEnvironmentEventsEnvironmentEventParserRuleCall_2_1_0 = (RuleCall)cEnvironmentEventsAssignment_2_1.eContents().get(0);
+		private final Keyword cHyphenMinusGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cActionAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final CrossReference cActionActionCrossReference_4_0 = (CrossReference)cActionAssignment_4.eContents().get(0);
+		private final RuleCall cActionActionEStringParserRuleCall_4_0_1 = (RuleCall)cActionActionCrossReference_4_0.eContents().get(1);
+		
+		//Condition:
+		//	{Condition} ('-' environmentEvents+=EnvironmentEvent) ('and' environmentEvents+=EnvironmentEvent)*
+		//	'->' action=[Action|EString];
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{Condition} ('-' environmentEvents+=EnvironmentEvent) ('and' environmentEvents+=EnvironmentEvent)* '->'
+		//action=[Action|EString]
+		public Group getGroup() { return cGroup; }
+		
+		//{Condition}
+		public Action getConditionAction_0() { return cConditionAction_0; }
+		
+		//'-' environmentEvents+=EnvironmentEvent
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//'-'
+		public Keyword getHyphenMinusKeyword_1_0() { return cHyphenMinusKeyword_1_0; }
+		
+		//environmentEvents+=EnvironmentEvent
+		public Assignment getEnvironmentEventsAssignment_1_1() { return cEnvironmentEventsAssignment_1_1; }
+		
+		//EnvironmentEvent
+		public RuleCall getEnvironmentEventsEnvironmentEventParserRuleCall_1_1_0() { return cEnvironmentEventsEnvironmentEventParserRuleCall_1_1_0; }
+		
+		//('and' environmentEvents+=EnvironmentEvent)*
+		public Group getGroup_2() { return cGroup_2; }
+		
+		//'and'
+		public Keyword getAndKeyword_2_0() { return cAndKeyword_2_0; }
+		
+		//environmentEvents+=EnvironmentEvent
+		public Assignment getEnvironmentEventsAssignment_2_1() { return cEnvironmentEventsAssignment_2_1; }
+		
+		//EnvironmentEvent
+		public RuleCall getEnvironmentEventsEnvironmentEventParserRuleCall_2_1_0() { return cEnvironmentEventsEnvironmentEventParserRuleCall_2_1_0; }
+		
+		//'->'
+		public Keyword getHyphenMinusGreaterThanSignKeyword_3() { return cHyphenMinusGreaterThanSignKeyword_3; }
+		
+		//action=[Action|EString]
+		public Assignment getActionAssignment_4() { return cActionAssignment_4; }
+		
+		//[Action|EString]
+		public CrossReference getActionActionCrossReference_4_0() { return cActionActionCrossReference_4_0; }
+		
+		//EString
+		public RuleCall getActionActionEStringParserRuleCall_4_0_1() { return cActionActionEStringParserRuleCall_4_0_1; }
 	}
 	public class ActionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.unice.polytech.dsl.Polycar.Action");
@@ -177,48 +242,24 @@ public class PolycarGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.unice.polytech.dsl.Polycar.EnvironmentEvent");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cEnvironmentEventAction_0 = (Action)cGroup.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cHyphenMinusKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Assignment cTypeAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cTypeEventTypeEnumRuleCall_1_1_0 = (RuleCall)cTypeAssignment_1_1.eContents().get(0);
-		private final Keyword cHyphenMinusGreaterThanSignKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
-		private final Assignment cActionAssignment_1_3 = (Assignment)cGroup_1.eContents().get(3);
-		private final CrossReference cActionActionCrossReference_1_3_0 = (CrossReference)cActionAssignment_1_3.eContents().get(0);
-		private final RuleCall cActionActionEStringParserRuleCall_1_3_0_1 = (RuleCall)cActionActionCrossReference_1_3_0.eContents().get(1);
+		private final Assignment cTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cTypeEventTypeEnumRuleCall_1_0 = (RuleCall)cTypeAssignment_1.eContents().get(0);
 		
 		//EnvironmentEvent:
-		//	{EnvironmentEvent} ('-' type=EventType '->' action=[Action|EString]);
+		//	{EnvironmentEvent} type=EventType;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{EnvironmentEvent} ('-' type=EventType '->' action=[Action|EString])
+		//{EnvironmentEvent} type=EventType
 		public Group getGroup() { return cGroup; }
 		
 		//{EnvironmentEvent}
 		public Action getEnvironmentEventAction_0() { return cEnvironmentEventAction_0; }
 		
-		//'-' type=EventType '->' action=[Action|EString]
-		public Group getGroup_1() { return cGroup_1; }
-		
-		//'-'
-		public Keyword getHyphenMinusKeyword_1_0() { return cHyphenMinusKeyword_1_0; }
-		
 		//type=EventType
-		public Assignment getTypeAssignment_1_1() { return cTypeAssignment_1_1; }
+		public Assignment getTypeAssignment_1() { return cTypeAssignment_1; }
 		
 		//EventType
-		public RuleCall getTypeEventTypeEnumRuleCall_1_1_0() { return cTypeEventTypeEnumRuleCall_1_1_0; }
-		
-		//'->'
-		public Keyword getHyphenMinusGreaterThanSignKeyword_1_2() { return cHyphenMinusGreaterThanSignKeyword_1_2; }
-		
-		//action=[Action|EString]
-		public Assignment getActionAssignment_1_3() { return cActionAssignment_1_3; }
-		
-		//[Action|EString]
-		public CrossReference getActionActionCrossReference_1_3_0() { return cActionActionCrossReference_1_3_0; }
-		
-		//EString
-		public RuleCall getActionActionEStringParserRuleCall_1_3_0_1() { return cActionActionEStringParserRuleCall_1_3_0_1; }
+		public RuleCall getTypeEventTypeEnumRuleCall_1_0() { return cTypeEventTypeEnumRuleCall_1_0; }
 	}
 	public class SubActionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.unice.polytech.dsl.Polycar.SubAction");
@@ -466,6 +507,7 @@ public class PolycarGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	private final CarElements pCar;
+	private final ConditionElements pCondition;
 	private final ActionElements pAction;
 	private final EnvironmentEventElements pEnvironmentEvent;
 	private final SubActionElements pSubAction;
@@ -484,6 +526,7 @@ public class PolycarGrammarAccess extends AbstractGrammarElementFinder {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pCar = new CarElements();
+		this.pCondition = new ConditionElements();
 		this.pAction = new ActionElements();
 		this.pEnvironmentEvent = new EnvironmentEventElements();
 		this.pSubAction = new SubActionElements();
@@ -528,8 +571,8 @@ public class PolycarGrammarAccess extends AbstractGrammarElementFinder {
 	//	actions+=Action
 	//	actions+=Action*
 	//	'environments' ':'
-	//	environmentEvents+=EnvironmentEvent
-	//	environmentEvents+=EnvironmentEvent*
+	//	conditions+=Condition
+	//	conditions+=Condition*
 	//	'RUN' defaultAction=[Action]?;
 	public CarElements getCarAccess() {
 		return pCar;
@@ -537,6 +580,17 @@ public class PolycarGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getCarRule() {
 		return getCarAccess().getRule();
+	}
+	
+	//Condition:
+	//	{Condition} ('-' environmentEvents+=EnvironmentEvent) ('and' environmentEvents+=EnvironmentEvent)*
+	//	'->' action=[Action|EString];
+	public ConditionElements getConditionAccess() {
+		return pCondition;
+	}
+	
+	public ParserRule getConditionRule() {
+		return getConditionAccess().getRule();
 	}
 	
 	//Action:
@@ -552,7 +606,7 @@ public class PolycarGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//EnvironmentEvent:
-	//	{EnvironmentEvent} ('-' type=EventType '->' action=[Action|EString]);
+	//	{EnvironmentEvent} type=EventType;
 	public EnvironmentEventElements getEnvironmentEventAccess() {
 		return pEnvironmentEvent;
 	}

@@ -5,6 +5,7 @@ package fr.unice.polytech.dsl.serializer;
 
 import com.google.inject.Inject;
 import fr.unice.polytech.dsl.polycar.Car;
+import fr.unice.polytech.dsl.polycar.Condition;
 import fr.unice.polytech.dsl.polycar.EnvironmentEvent;
 import fr.unice.polytech.dsl.polycar.PolycarPackage;
 import fr.unice.polytech.dsl.polycar.SubAction;
@@ -40,6 +41,9 @@ public class PolycarSemanticSequencer extends AbstractDelegatingSemanticSequence
 			case PolycarPackage.CAR:
 				sequence_Car(context, (Car) semanticObject); 
 				return; 
+			case PolycarPackage.CONDITION:
+				sequence_Condition(context, (Condition) semanticObject); 
+				return; 
 			case PolycarPackage.ENVIRONMENT_EVENT:
 				sequence_EnvironmentEvent(context, (EnvironmentEvent) semanticObject); 
 				return; 
@@ -72,8 +76,8 @@ public class PolycarSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *         name=EString 
 	 *         actions+=Action 
 	 *         actions+=Action* 
-	 *         environmentEvents+=EnvironmentEvent 
-	 *         environmentEvents+=EnvironmentEvent* 
+	 *         conditions+=Condition 
+	 *         conditions+=Condition* 
 	 *         defaultAction=[Action|ID]?
 	 *     )
 	 */
@@ -84,21 +88,30 @@ public class PolycarSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Contexts:
+	 *     Condition returns Condition
+	 *
+	 * Constraint:
+	 *     (environmentEvents+=EnvironmentEvent environmentEvents+=EnvironmentEvent* action=[Action|EString])
+	 */
+	protected void sequence_Condition(ISerializationContext context, Condition semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     EnvironmentEvent returns EnvironmentEvent
 	 *
 	 * Constraint:
-	 *     (type=EventType action=[Action|EString])
+	 *     type=EventType
 	 */
 	protected void sequence_EnvironmentEvent(ISerializationContext context, EnvironmentEvent semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, PolycarPackage.Literals.ENVIRONMENT_EVENT__TYPE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PolycarPackage.Literals.ENVIRONMENT_EVENT__TYPE));
-			if (transientValues.isValueTransient(semanticObject, PolycarPackage.Literals.ENVIRONMENT_EVENT__ACTION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PolycarPackage.Literals.ENVIRONMENT_EVENT__ACTION));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getEnvironmentEventAccess().getTypeEventTypeEnumRuleCall_1_1_0(), semanticObject.getType());
-		feeder.accept(grammarAccess.getEnvironmentEventAccess().getActionActionEStringParserRuleCall_1_3_0_1(), semanticObject.eGet(PolycarPackage.Literals.ENVIRONMENT_EVENT__ACTION, false));
+		feeder.accept(grammarAccess.getEnvironmentEventAccess().getTypeEventTypeEnumRuleCall_1_0(), semanticObject.getType());
 		feeder.finish();
 	}
 	

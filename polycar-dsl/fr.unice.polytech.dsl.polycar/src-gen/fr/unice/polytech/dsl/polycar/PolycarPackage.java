@@ -133,22 +133,13 @@ public interface PolycarPackage extends EPackage {
 	int CAR__RIGHT_MOTOR = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Environment Events</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAR__ENVIRONMENT_EVENTS = NAMED_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
 	 * The feature id for the '<em><b>Left Motor</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAR__LEFT_MOTOR = NAMED_ELEMENT_FEATURE_COUNT + 3;
+	int CAR__LEFT_MOTOR = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Default Action</b></em>' reference.
@@ -157,7 +148,16 @@ public interface PolycarPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAR__DEFAULT_ACTION = NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int CAR__DEFAULT_ACTION = NAMED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Conditions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAR__CONDITIONS = NAMED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Car</em>' class.
@@ -298,22 +298,13 @@ public interface PolycarPackage extends EPackage {
 	int ENVIRONMENT_EVENT__TYPE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Action</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENVIRONMENT_EVENT__ACTION = 1;
-
-	/**
 	 * The number of structural features of the '<em>Environment Event</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENVIRONMENT_EVENT_FEATURE_COUNT = 2;
+	int ENVIRONMENT_EVENT_FEATURE_COUNT = 1;
 
 	/**
 	 * The operation id for the '<em>React</em>' operation.
@@ -334,6 +325,52 @@ public interface PolycarPackage extends EPackage {
 	int ENVIRONMENT_EVENT_OPERATION_COUNT = 1;
 
 	/**
+	 * The meta object id for the '{@link fr.unice.polytech.dsl.polycar.impl.ConditionImpl <em>Condition</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.unice.polytech.dsl.polycar.impl.ConditionImpl
+	 * @see fr.unice.polytech.dsl.polycar.impl.PolycarPackageImpl#getCondition()
+	 * @generated
+	 */
+	int CONDITION = 5;
+
+	/**
+	 * The feature id for the '<em><b>Environment Events</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION__ENVIRONMENT_EVENTS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Action</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION__ACTION = 1;
+
+	/**
+	 * The number of structural features of the '<em>Condition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Condition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link fr.unice.polytech.dsl.polycar.ActionType <em>Action Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -341,7 +378,7 @@ public interface PolycarPackage extends EPackage {
 	 * @see fr.unice.polytech.dsl.polycar.impl.PolycarPackageImpl#getActionType()
 	 * @generated
 	 */
-	int ACTION_TYPE = 5;
+	int ACTION_TYPE = 6;
 
 	/**
 	 * The meta object id for the '{@link fr.unice.polytech.dsl.polycar.EventType <em>Event Type</em>}' enum.
@@ -351,7 +388,7 @@ public interface PolycarPackage extends EPackage {
 	 * @see fr.unice.polytech.dsl.polycar.impl.PolycarPackageImpl#getEventType()
 	 * @generated
 	 */
-	int EVENT_TYPE = 6;
+	int EVENT_TYPE = 7;
 
 	/**
 	 * Returns the meta object for class '{@link fr.unice.polytech.dsl.polycar.NamedElement <em>Named Element</em>}'.
@@ -407,17 +444,6 @@ public interface PolycarPackage extends EPackage {
 	EAttribute getCar_RightMotor();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link fr.unice.polytech.dsl.polycar.Car#getEnvironmentEvents <em>Environment Events</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Environment Events</em>'.
-	 * @see fr.unice.polytech.dsl.polycar.Car#getEnvironmentEvents()
-	 * @see #getCar()
-	 * @generated
-	 */
-	EReference getCar_EnvironmentEvents();
-
-	/**
 	 * Returns the meta object for the attribute '{@link fr.unice.polytech.dsl.polycar.Car#getLeftMotor <em>Left Motor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -438,6 +464,17 @@ public interface PolycarPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCar_DefaultAction();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link fr.unice.polytech.dsl.polycar.Car#getConditions <em>Conditions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Conditions</em>'.
+	 * @see fr.unice.polytech.dsl.polycar.Car#getConditions()
+	 * @see #getCar()
+	 * @generated
+	 */
+	EReference getCar_Conditions();
 
 	/**
 	 * Returns the meta object for class '{@link fr.unice.polytech.dsl.polycar.Action <em>Action</em>}'.
@@ -525,17 +562,6 @@ public interface PolycarPackage extends EPackage {
 	EAttribute getEnvironmentEvent_Type();
 
 	/**
-	 * Returns the meta object for the reference '{@link fr.unice.polytech.dsl.polycar.EnvironmentEvent#getAction <em>Action</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Action</em>'.
-	 * @see fr.unice.polytech.dsl.polycar.EnvironmentEvent#getAction()
-	 * @see #getEnvironmentEvent()
-	 * @generated
-	 */
-	EReference getEnvironmentEvent_Action();
-
-	/**
 	 * Returns the meta object for the '{@link fr.unice.polytech.dsl.polycar.EnvironmentEvent#react() <em>React</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -544,6 +570,38 @@ public interface PolycarPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getEnvironmentEvent__React();
+
+	/**
+	 * Returns the meta object for class '{@link fr.unice.polytech.dsl.polycar.Condition <em>Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Condition</em>'.
+	 * @see fr.unice.polytech.dsl.polycar.Condition
+	 * @generated
+	 */
+	EClass getCondition();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link fr.unice.polytech.dsl.polycar.Condition#getEnvironmentEvents <em>Environment Events</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Environment Events</em>'.
+	 * @see fr.unice.polytech.dsl.polycar.Condition#getEnvironmentEvents()
+	 * @see #getCondition()
+	 * @generated
+	 */
+	EReference getCondition_EnvironmentEvents();
+
+	/**
+	 * Returns the meta object for the reference '{@link fr.unice.polytech.dsl.polycar.Condition#getAction <em>Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Action</em>'.
+	 * @see fr.unice.polytech.dsl.polycar.Condition#getAction()
+	 * @see #getCondition()
+	 * @generated
+	 */
+	EReference getCondition_Action();
 
 	/**
 	 * Returns the meta object for enum '{@link fr.unice.polytech.dsl.polycar.ActionType <em>Action Type</em>}'.
@@ -633,14 +691,6 @@ public interface PolycarPackage extends EPackage {
 		EAttribute CAR__RIGHT_MOTOR = eINSTANCE.getCar_RightMotor();
 
 		/**
-		 * The meta object literal for the '<em><b>Environment Events</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CAR__ENVIRONMENT_EVENTS = eINSTANCE.getCar_EnvironmentEvents();
-
-		/**
 		 * The meta object literal for the '<em><b>Left Motor</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -655,6 +705,14 @@ public interface PolycarPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CAR__DEFAULT_ACTION = eINSTANCE.getCar_DefaultAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Conditions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CAR__CONDITIONS = eINSTANCE.getCar_Conditions();
 
 		/**
 		 * The meta object literal for the '{@link fr.unice.polytech.dsl.polycar.impl.ActionImpl <em>Action</em>}' class.
@@ -727,20 +785,38 @@ public interface PolycarPackage extends EPackage {
 		EAttribute ENVIRONMENT_EVENT__TYPE = eINSTANCE.getEnvironmentEvent_Type();
 
 		/**
-		 * The meta object literal for the '<em><b>Action</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENVIRONMENT_EVENT__ACTION = eINSTANCE.getEnvironmentEvent_Action();
-
-		/**
 		 * The meta object literal for the '<em><b>React</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EOperation ENVIRONMENT_EVENT___REACT = eINSTANCE.getEnvironmentEvent__React();
+
+		/**
+		 * The meta object literal for the '{@link fr.unice.polytech.dsl.polycar.impl.ConditionImpl <em>Condition</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.unice.polytech.dsl.polycar.impl.ConditionImpl
+		 * @see fr.unice.polytech.dsl.polycar.impl.PolycarPackageImpl#getCondition()
+		 * @generated
+		 */
+		EClass CONDITION = eINSTANCE.getCondition();
+
+		/**
+		 * The meta object literal for the '<em><b>Environment Events</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONDITION__ENVIRONMENT_EVENTS = eINSTANCE.getCondition_EnvironmentEvents();
+
+		/**
+		 * The meta object literal for the '<em><b>Action</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONDITION__ACTION = eINSTANCE.getCondition_Action();
 
 		/**
 		 * The meta object literal for the '{@link fr.unice.polytech.dsl.polycar.ActionType <em>Action Type</em>}' enum.

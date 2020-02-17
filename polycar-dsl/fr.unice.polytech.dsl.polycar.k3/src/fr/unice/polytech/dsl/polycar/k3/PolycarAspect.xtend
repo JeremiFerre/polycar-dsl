@@ -10,12 +10,14 @@ import fr.unice.polytech.deantoni.vrep.polycar.PolyCar
 import fr.unice.polytech.dsl.polycar.EventType
 import fr.inria.diverse.k3.al.annotationprocessor.Step
 
+import static extension fr.unice.polytech.dsl.polycar.k3.ConditionAspect.*
 import static extension fr.unice.polytech.dsl.polycar.k3.EnvironmentEventAspect.*
 import static extension fr.unice.polytech.dsl.polycar.k3.ActionAspect.*
 import static extension fr.unice.polytech.dsl.polycar.k3.SubActionAspect.*
 import fr.unice.polytech.deantoni.vrep.polycar.JbossCar
 import fr.unice.polytech.deantoni.vrep.polycar.Direction
 import java.util.stream.Collectors
+import fr.unice.polytech.dsl.polycar.Condition
 
 /**
  * Sample aspect that gives java.io.File the ability to store Text content and save it to disk
@@ -36,11 +38,26 @@ class PolycarAspect {
 		}
 		
 		while (true) {
-			val triggeredEvents = _self.environmentEvents.stream.filter(v|v.isTriggered(car)).collect(Collectors.toList())
+			val triggeredEvents = _self.conditions.stream.filter(v|v.isTriggered(car)).collect(Collectors.toList())
 			if (!triggeredEvents.empty) {
 				triggeredEvents.get(0).run(car)
 			}
 			car.synchronize()
+		}
+	}
+}
+
+@Aspect(className=Condition)
+class ConditionAspect {
+	
+	def boolean isTriggered(JbossCar car) {
+		return _self.environmentEvents.stream.allMatch(v|v.isTriggered(car))
+	}
+	
+	@Step
+	def void run(JbossCar car) {
+		if (_self.isTriggered(car)) {
+			_self.action.run(car)
 		}
 	}
 }
@@ -81,13 +98,6 @@ class EnvironmentEventAspect {
 		
 		return trigger
 	}
-
-	@Step
-	def void run(JbossCar car) {
-		if (_self.isTriggered(car)) {
-			_self.action.run(car)
-		}
-	}
 }
 
 @Aspect(className=Action)
@@ -121,7 +131,7 @@ class SubActionAspect {
 			case SPEED: {
 				println(_self.value)
 				car.goStraight(_self.value)
-				}
+			}
 		}
 	}
 }

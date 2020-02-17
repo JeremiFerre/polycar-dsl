@@ -165,6 +165,29 @@ public class PolycarItemProviderAdapterFactory extends PolycarAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link fr.unice.polytech.dsl.polycar.Condition} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ConditionItemProvider conditionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link fr.unice.polytech.dsl.polycar.Condition}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createConditionAdapter() {
+		if (conditionItemProvider == null) {
+			conditionItemProvider = new ConditionItemProvider(this);
+		}
+
+		return conditionItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -271,6 +294,8 @@ public class PolycarItemProviderAdapterFactory extends PolycarAdapterFactory
 			subActionItemProvider.dispose();
 		if (environmentEventItemProvider != null)
 			environmentEventItemProvider.dispose();
+		if (conditionItemProvider != null)
+			conditionItemProvider.dispose();
 	}
 
 }

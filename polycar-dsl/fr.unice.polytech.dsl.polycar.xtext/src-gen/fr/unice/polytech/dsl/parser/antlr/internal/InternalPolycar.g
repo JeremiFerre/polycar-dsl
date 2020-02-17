@@ -164,18 +164,18 @@ ruleCar returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getCarAccess().getEnvironmentEventsEnvironmentEventParserRuleCall_9_0());
+					newCompositeNode(grammarAccess.getCarAccess().getConditionsConditionParserRuleCall_9_0());
 				}
-				lv_environmentEvents_9_0=ruleEnvironmentEvent
+				lv_conditions_9_0=ruleCondition
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getCarRule());
 					}
 					add(
 						$current,
-						"environmentEvents",
-						lv_environmentEvents_9_0,
-						"fr.unice.polytech.dsl.Polycar.EnvironmentEvent");
+						"conditions",
+						lv_conditions_9_0,
+						"fr.unice.polytech.dsl.Polycar.Condition");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -183,18 +183,18 @@ ruleCar returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getCarAccess().getEnvironmentEventsEnvironmentEventParserRuleCall_10_0());
+					newCompositeNode(grammarAccess.getCarAccess().getConditionsConditionParserRuleCall_10_0());
 				}
-				lv_environmentEvents_10_0=ruleEnvironmentEvent
+				lv_conditions_10_0=ruleCondition
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getCarRule());
 					}
 					add(
 						$current,
-						"environmentEvents",
-						lv_environmentEvents_10_0,
-						"fr.unice.polytech.dsl.Polycar.EnvironmentEvent");
+						"conditions",
+						lv_conditions_10_0,
+						"fr.unice.polytech.dsl.Polycar.Condition");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -216,6 +216,102 @@ ruleCar returns [EObject current=null]
 				}
 			)
 		)?
+	)
+;
+
+// Entry rule entryRuleCondition
+entryRuleCondition returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getConditionRule()); }
+	iv_ruleCondition=ruleCondition
+	{ $current=$iv_ruleCondition.current; }
+	EOF;
+
+// Rule Condition
+ruleCondition returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getConditionAccess().getConditionAction_0(),
+					$current);
+			}
+		)
+		(
+			otherlv_1='-'
+			{
+				newLeafNode(otherlv_1, grammarAccess.getConditionAccess().getHyphenMinusKeyword_1_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getConditionAccess().getEnvironmentEventsEnvironmentEventParserRuleCall_1_1_0());
+					}
+					lv_environmentEvents_2_0=ruleEnvironmentEvent
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getConditionRule());
+						}
+						add(
+							$current,
+							"environmentEvents",
+							lv_environmentEvents_2_0,
+							"fr.unice.polytech.dsl.Polycar.EnvironmentEvent");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		(
+			otherlv_3='and'
+			{
+				newLeafNode(otherlv_3, grammarAccess.getConditionAccess().getAndKeyword_2_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getConditionAccess().getEnvironmentEventsEnvironmentEventParserRuleCall_2_1_0());
+					}
+					lv_environmentEvents_4_0=ruleEnvironmentEvent
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getConditionRule());
+						}
+						add(
+							$current,
+							"environmentEvents",
+							lv_environmentEvents_4_0,
+							"fr.unice.polytech.dsl.Polycar.EnvironmentEvent");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)*
+		otherlv_5='->'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getConditionAccess().getHyphenMinusGreaterThanSignKeyword_3());
+		}
+		(
+			(
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getConditionRule());
+					}
+				}
+				{
+					newCompositeNode(grammarAccess.getConditionAccess().getActionActionCrossReference_4_0());
+				}
+				ruleEString
+				{
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
 	)
 ;
 
@@ -330,48 +426,22 @@ ruleEnvironmentEvent returns [EObject current=null]
 			}
 		)
 		(
-			otherlv_1='-'
-			{
-				newLeafNode(otherlv_1, grammarAccess.getEnvironmentEventAccess().getHyphenMinusKeyword_1_0());
-			}
 			(
-				(
-					{
-						newCompositeNode(grammarAccess.getEnvironmentEventAccess().getTypeEventTypeEnumRuleCall_1_1_0());
+				{
+					newCompositeNode(grammarAccess.getEnvironmentEventAccess().getTypeEventTypeEnumRuleCall_1_0());
+				}
+				lv_type_1_0=ruleEventType
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getEnvironmentEventRule());
 					}
-					lv_type_2_0=ruleEventType
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getEnvironmentEventRule());
-						}
-						set(
-							$current,
-							"type",
-							lv_type_2_0,
-							"fr.unice.polytech.dsl.Polycar.EventType");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			otherlv_3='->'
-			{
-				newLeafNode(otherlv_3, grammarAccess.getEnvironmentEventAccess().getHyphenMinusGreaterThanSignKeyword_1_2());
-			}
-			(
-				(
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getEnvironmentEventRule());
-						}
-					}
-					{
-						newCompositeNode(grammarAccess.getEnvironmentEventAccess().getActionActionCrossReference_1_3_0());
-					}
-					ruleEString
-					{
-						afterParserOrEnumRuleCall();
-					}
-				)
+					set(
+						$current,
+						"type",
+						lv_type_1_0,
+						"fr.unice.polytech.dsl.Polycar.EventType");
+					afterParserOrEnumRuleCall();
+				}
 			)
 		)
 	)

@@ -12,11 +12,18 @@ Car returns Car:
 		actions+=Action
 	    	(actions+=Action)*
 	'environments' ':'
-		environmentEvents+=EnvironmentEvent
-	    	(environmentEvents+=EnvironmentEvent)*
+		conditions+=Condition
+	    	(conditions+=Condition)*
 	'RUN' (defaultAction=[Action])?;
 
-	
+
+Condition returns Condition:
+	{Condition}
+	('-' environmentEvents+=EnvironmentEvent)
+	('and' environmentEvents+=EnvironmentEvent)* 
+	'->' action=[Action|EString]
+;
+
 Action returns Action:
 	{Action}
 	name=EString ':'
@@ -25,7 +32,8 @@ Action returns Action:
 		   
 EnvironmentEvent returns EnvironmentEvent:
 	{EnvironmentEvent}
-	('-' type=EventType '->' action=[Action|EString]);
+	type=EventType
+;
 	   
 SubAction returns SubAction:
 	{SubAction}

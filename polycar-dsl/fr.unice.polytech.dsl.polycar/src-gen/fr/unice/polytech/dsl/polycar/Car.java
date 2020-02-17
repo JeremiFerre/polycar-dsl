@@ -15,9 +15,9 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link fr.unice.polytech.dsl.polycar.Car#getActions <em>Actions</em>}</li>
  *   <li>{@link fr.unice.polytech.dsl.polycar.Car#getRightMotor <em>Right Motor</em>}</li>
- *   <li>{@link fr.unice.polytech.dsl.polycar.Car#getEnvironmentEvents <em>Environment Events</em>}</li>
  *   <li>{@link fr.unice.polytech.dsl.polycar.Car#getLeftMotor <em>Left Motor</em>}</li>
  *   <li>{@link fr.unice.polytech.dsl.polycar.Car#getDefaultAction <em>Default Action</em>}</li>
+ *   <li>{@link fr.unice.polytech.dsl.polycar.Car#getConditions <em>Conditions</em>}</li>
  * </ul>
  *
  * @see fr.unice.polytech.dsl.polycar.PolycarPackage#getCar()
@@ -66,22 +66,6 @@ public interface Car extends NamedElement {
 	 * @generated
 	 */
 	void setRightMotor(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Environment Events</b></em>' containment reference list.
-	 * The list contents are of type {@link fr.unice.polytech.dsl.polycar.EnvironmentEvent}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Environment Events</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Environment Events</em>' containment reference list.
-	 * @see fr.unice.polytech.dsl.polycar.PolycarPackage#getCar_EnvironmentEvents()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<EnvironmentEvent> getEnvironmentEvents();
 
 	/**
 	 * Returns the value of the '<em><b>Left Motor</b></em>' attribute.
@@ -134,5 +118,21 @@ public interface Car extends NamedElement {
 	 * @generated
 	 */
 	void setDefaultAction(Action value);
+
+	/**
+	 * Returns the value of the '<em><b>Conditions</b></em>' containment reference list.
+	 * The list contents are of type {@link fr.unice.polytech.dsl.polycar.Condition}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Conditions</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Conditions</em>' containment reference list.
+	 * @see fr.unice.polytech.dsl.polycar.PolycarPackage#getCar_Conditions()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Condition> getConditions();
 
 } // Car

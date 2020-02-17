@@ -112,7 +112,7 @@ public class CarItemProvider extends NamedElementItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(PolycarPackage.Literals.CAR__ACTIONS);
-			childrenFeatures.add(PolycarPackage.Literals.CAR__ENVIRONMENT_EVENTS);
+			childrenFeatures.add(PolycarPackage.Literals.CAR__CONDITIONS);
 		}
 		return childrenFeatures;
 	}
@@ -181,7 +181,7 @@ public class CarItemProvider extends NamedElementItemProvider {
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case PolycarPackage.CAR__ACTIONS:
-		case PolycarPackage.CAR__ENVIRONMENT_EVENTS:
+		case PolycarPackage.CAR__CONDITIONS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -202,8 +202,8 @@ public class CarItemProvider extends NamedElementItemProvider {
 		newChildDescriptors.add(
 				createChildParameter(PolycarPackage.Literals.CAR__ACTIONS, PolycarFactory.eINSTANCE.createAction()));
 
-		newChildDescriptors.add(createChildParameter(PolycarPackage.Literals.CAR__ENVIRONMENT_EVENTS,
-				PolycarFactory.eINSTANCE.createEnvironmentEvent()));
+		newChildDescriptors.add(createChildParameter(PolycarPackage.Literals.CAR__CONDITIONS,
+				PolycarFactory.eINSTANCE.createCondition()));
 	}
 
 }

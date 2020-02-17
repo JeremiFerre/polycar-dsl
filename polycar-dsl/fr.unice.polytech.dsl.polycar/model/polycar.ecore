@@ -8,10 +8,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="actions" upperBound="-1"
         eType="#//Action" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rightMotor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="environmentEvents" upperBound="-1"
-        eType="#//EnvironmentEvent" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="leftMotor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="defaultAction" eType="#//Action"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conditions" upperBound="-1"
+        eType="#//Condition" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Action" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="subActions" lowerBound="1"
@@ -30,8 +30,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="EnvironmentEvent">
     <eOperations name="react"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//EventType"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="action" lowerBound="1"
-        eType="#//Action"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="EventType">
     <eLiterals name="TRAFFIC_LIGHT_ON"/>
@@ -46,5 +44,11 @@
     <eLiterals name="OBJECT_MIDDLE" value="9"/>
     <eLiterals name="CAN_GO_LEFT" value="10"/>
     <eLiterals name="CAN_GO_RIGHT" value="11"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Condition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="environmentEvents" upperBound="-1"
+        eType="#//EnvironmentEvent" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="action" lowerBound="1"
+        eType="#//Action"/>
   </eClassifiers>
 </ecore:EPackage>

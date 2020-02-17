@@ -58,6 +58,15 @@ public interface PolycarFactory extends EFactory {
 	EnvironmentEvent createEnvironmentEvent();
 
 	/**
+	 * Returns a new object of class '<em>Condition</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Condition</em>'.
+	 * @generated
+	 */
+	Condition createCondition();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

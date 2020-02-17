@@ -1,5 +1,5 @@
-'-'=31
-'->'=32
+'-'=32
+'->'=31
 ':'=28
 'CAN_GO_LEFT'=21
 'CAN_GO_RIGHT'=22
@@ -19,9 +19,10 @@
 'TRAFFIC_LIGHT_OFF'=16
 'TRAFFIC_LIGHT_ON'=17
 'actions'=27
-'during'=34
+'and'=33
+'during'=35
 'environments'=29
-'is'=33
+'is'=34
 RULE_ANY_OTHER=10
 RULE_ID=5
 RULE_INT=6
@@ -53,3 +54,4 @@ T__31=31
 T__32=32
 T__33=33
 T__34=34
+T__35=35

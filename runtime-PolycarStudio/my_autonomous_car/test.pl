@@ -18,6 +18,11 @@ Car SuperAutonomousCar
 			- SPEED is 0
 			- MOTOR_LEFT is 15 during 21
 			- SPEED is 10
+		GoRightLong:
+			- SPEED is 10 during 30
+			- SPEED is 0
+			- MOTOR_LEFT is 15 during 21
+			- SPEED is 10
 		GoLeft:
 			- SPEED is 10 during 20
 			- SPEED is 0
@@ -29,9 +34,10 @@ Car SuperAutonomousCar
 		- OFF_ROAD_RIGHT -> AlignLeft
 		- TRAFFIC_LIGHT_OFF -> RedLight
 		- TRAFFIC_LIGHT_ON -> GreenLight
-		- FORB_LEFT -> GoRight
-		- FORB_RIGHT -> GoLeft
-		- FORB_FORWARD -> GoRight
+		- FORB_LEFT and FORB_RIGHT -> GreenLight
+		- FORB_RIGHT and CAN_GO_LEFT -> GoLeft
+		- FORB_LEFT and CAN_GO_RIGHT -> GoRight
+		- FORB_FORWARD -> GoRightLong
 		- CAN_GO_LEFT -> GoLeft
 		- CAN_GO_RIGHT -> GoRight
 RUN GreenLight

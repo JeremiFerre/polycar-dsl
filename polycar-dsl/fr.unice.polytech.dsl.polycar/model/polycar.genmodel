@@ -35,9 +35,9 @@
     <genClasses ecoreClass="polycar.ecore#//Car">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference polycar.ecore#//Car/actions"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute polycar.ecore#//Car/rightMotor"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference polycar.ecore#//Car/environmentEvents"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute polycar.ecore#//Car/leftMotor"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference polycar.ecore#//Car/defaultAction"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference polycar.ecore#//Car/conditions"/>
     </genClasses>
     <genClasses ecoreClass="polycar.ecore#//Action">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference polycar.ecore#//Action/subActions"/>
@@ -49,8 +49,11 @@
     </genClasses>
     <genClasses ecoreClass="polycar.ecore#//EnvironmentEvent">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute polycar.ecore#//EnvironmentEvent/type"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference polycar.ecore#//EnvironmentEvent/action"/>
       <genOperations ecoreOperation="polycar.ecore#//EnvironmentEvent/react"/>
+    </genClasses>
+    <genClasses ecoreClass="polycar.ecore#//Condition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference polycar.ecore#//Condition/environmentEvents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference polycar.ecore#//Condition/action"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

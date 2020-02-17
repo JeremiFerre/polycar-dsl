@@ -47,6 +47,9 @@ public class PolycarGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cEnvironmentEventsAssignment_10 = (Assignment)cGroup.eContents().get(10);
 		private final RuleCall cEnvironmentEventsEnvironmentEventParserRuleCall_10_0 = (RuleCall)cEnvironmentEventsAssignment_10.eContents().get(0);
 		private final Keyword cRUNKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Assignment cDefaultActionAssignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final CrossReference cDefaultActionActionCrossReference_12_0 = (CrossReference)cDefaultActionAssignment_12.eContents().get(0);
+		private final RuleCall cDefaultActionActionIDTerminalRuleCall_12_0_1 = (RuleCall)cDefaultActionActionCrossReference_12_0.eContents().get(1);
 		
 		//Car:
 		//	{Car}
@@ -58,11 +61,11 @@ public class PolycarGrammarAccess extends AbstractGrammarElementFinder {
 		//	'environments' ':'
 		//	environmentEvents+=EnvironmentEvent
 		//	environmentEvents+=EnvironmentEvent*
-		//	'RUN';
+		//	'RUN' defaultAction=[Action]?;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{Car} 'Car' name=EString 'actions' ':' actions+=Action actions+=Action* 'environments' ':'
-		//environmentEvents+=EnvironmentEvent environmentEvents+=EnvironmentEvent* 'RUN'
+		//environmentEvents+=EnvironmentEvent environmentEvents+=EnvironmentEvent* 'RUN' defaultAction=[Action]?
 		public Group getGroup() { return cGroup; }
 		
 		//{Car}
@@ -115,6 +118,15 @@ public class PolycarGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//'RUN'
 		public Keyword getRUNKeyword_11() { return cRUNKeyword_11; }
+		
+		//defaultAction=[Action]?
+		public Assignment getDefaultActionAssignment_12() { return cDefaultActionAssignment_12; }
+		
+		//[Action]
+		public CrossReference getDefaultActionActionCrossReference_12_0() { return cDefaultActionActionCrossReference_12_0; }
+		
+		//ID
+		public RuleCall getDefaultActionActionIDTerminalRuleCall_12_0_1() { return cDefaultActionActionIDTerminalRuleCall_12_0_1; }
 	}
 	public class ActionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.unice.polytech.dsl.Polycar.Action");
@@ -329,16 +341,20 @@ public class PolycarGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cOBJECT_RIGHTOBJECT_RIGHTKeyword_8_0 = (Keyword)cOBJECT_RIGHTEnumLiteralDeclaration_8.eContents().get(0);
 		private final EnumLiteralDeclaration cOBJECT_MIDDLEEnumLiteralDeclaration_9 = (EnumLiteralDeclaration)cAlternatives.eContents().get(9);
 		private final Keyword cOBJECT_MIDDLEOBJECT_MIDDLEKeyword_9_0 = (Keyword)cOBJECT_MIDDLEEnumLiteralDeclaration_9.eContents().get(0);
+		private final EnumLiteralDeclaration cCAN_GO_LEFTEnumLiteralDeclaration_10 = (EnumLiteralDeclaration)cAlternatives.eContents().get(10);
+		private final Keyword cCAN_GO_LEFTCAN_GO_LEFTKeyword_10_0 = (Keyword)cCAN_GO_LEFTEnumLiteralDeclaration_10.eContents().get(0);
+		private final EnumLiteralDeclaration cCAN_GO_RIGHTEnumLiteralDeclaration_11 = (EnumLiteralDeclaration)cAlternatives.eContents().get(11);
+		private final Keyword cCAN_GO_RIGHTCAN_GO_RIGHTKeyword_11_0 = (Keyword)cCAN_GO_RIGHTEnumLiteralDeclaration_11.eContents().get(0);
 		
 		//enum EventType:
 		//	FORB_FORWARD | FORB_LEFT |
 		//	FORB_RIGHT | OFF_ROAD_LEFT | OFF_ROAD_RIGHT |
 		//	TRAFFIC_LIGHT_OFF | TRAFFIC_LIGHT_ON | OBJECT_LEFT |
-		//	OBJECT_RIGHT | OBJECT_MIDDLE;
+		//	OBJECT_RIGHT | OBJECT_MIDDLE | CAN_GO_LEFT | CAN_GO_RIGHT;
 		public EnumRule getRule() { return rule; }
 		
 		//FORB_FORWARD | FORB_LEFT | FORB_RIGHT | OFF_ROAD_LEFT | OFF_ROAD_RIGHT | TRAFFIC_LIGHT_OFF | TRAFFIC_LIGHT_ON |
-		//OBJECT_LEFT | OBJECT_RIGHT | OBJECT_MIDDLE
+		//OBJECT_LEFT | OBJECT_RIGHT | OBJECT_MIDDLE | CAN_GO_LEFT | CAN_GO_RIGHT
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//FORB_FORWARD
@@ -400,6 +416,18 @@ public class PolycarGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//'OBJECT_MIDDLE'
 		public Keyword getOBJECT_MIDDLEOBJECT_MIDDLEKeyword_9_0() { return cOBJECT_MIDDLEOBJECT_MIDDLEKeyword_9_0; }
+		
+		//CAN_GO_LEFT
+		public EnumLiteralDeclaration getCAN_GO_LEFTEnumLiteralDeclaration_10() { return cCAN_GO_LEFTEnumLiteralDeclaration_10; }
+		
+		//'CAN_GO_LEFT'
+		public Keyword getCAN_GO_LEFTCAN_GO_LEFTKeyword_10_0() { return cCAN_GO_LEFTCAN_GO_LEFTKeyword_10_0; }
+		
+		//CAN_GO_RIGHT
+		public EnumLiteralDeclaration getCAN_GO_RIGHTEnumLiteralDeclaration_11() { return cCAN_GO_RIGHTEnumLiteralDeclaration_11; }
+		
+		//'CAN_GO_RIGHT'
+		public Keyword getCAN_GO_RIGHTCAN_GO_RIGHTKeyword_11_0() { return cCAN_GO_RIGHTCAN_GO_RIGHTKeyword_11_0; }
 	}
 	public class ActionTypeElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "fr.unice.polytech.dsl.Polycar.ActionType");
@@ -502,7 +530,7 @@ public class PolycarGrammarAccess extends AbstractGrammarElementFinder {
 	//	'environments' ':'
 	//	environmentEvents+=EnvironmentEvent
 	//	environmentEvents+=EnvironmentEvent*
-	//	'RUN';
+	//	'RUN' defaultAction=[Action]?;
 	public CarElements getCarAccess() {
 		return pCar;
 	}
@@ -547,7 +575,7 @@ public class PolycarGrammarAccess extends AbstractGrammarElementFinder {
 	//	FORB_FORWARD | FORB_LEFT |
 	//	FORB_RIGHT | OFF_ROAD_LEFT | OFF_ROAD_RIGHT |
 	//	TRAFFIC_LIGHT_OFF | TRAFFIC_LIGHT_ON | OBJECT_LEFT |
-	//	OBJECT_RIGHT | OBJECT_MIDDLE;
+	//	OBJECT_RIGHT | OBJECT_MIDDLE | CAN_GO_LEFT | CAN_GO_RIGHT;
 	public EventTypeElements getEventTypeAccess() {
 		return eEventType;
 	}

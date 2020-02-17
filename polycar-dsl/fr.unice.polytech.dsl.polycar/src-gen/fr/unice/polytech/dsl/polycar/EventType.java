@@ -116,7 +116,25 @@ public enum EventType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	OBJECT_MIDDLE(9, "OBJECT_MIDDLE", "OBJECT_MIDDLE");
+	OBJECT_MIDDLE(9, "OBJECT_MIDDLE", "OBJECT_MIDDLE"),
+	/**
+	* The '<em><b>CAN GO LEFT</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #CAN_GO_LEFT_VALUE
+	* @generated
+	* @ordered
+	*/
+	CAN_GO_LEFT(10, "CAN_GO_LEFT", "CAN_GO_LEFT"),
+	/**
+	* The '<em><b>CAN GO RIGHT</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #CAN_GO_RIGHT_VALUE
+	* @generated
+	* @ordered
+	*/
+	CAN_GO_RIGHT(11, "CAN_GO_RIGHT", "CAN_GO_RIGHT");
 
 	/**
 	 * The '<em><b>TRAFFIC LIGHT ON</b></em>' literal value.
@@ -269,13 +287,44 @@ public enum EventType implements Enumerator {
 	public static final int OBJECT_MIDDLE_VALUE = 9;
 
 	/**
+	 * The '<em><b>CAN GO LEFT</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>CAN GO LEFT</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #CAN_GO_LEFT
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int CAN_GO_LEFT_VALUE = 10;
+
+	/**
+	 * The '<em><b>CAN GO RIGHT</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>CAN GO RIGHT</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #CAN_GO_RIGHT
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int CAN_GO_RIGHT_VALUE = 11;
+
+	/**
 	 * An array of all the '<em><b>Event Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private static final EventType[] VALUES_ARRAY = new EventType[] { TRAFFIC_LIGHT_ON, TRAFFIC_LIGHT_OFF, FORB_FORWARD,
-			FORB_LEFT, FORB_RIGHT, OFF_ROAD_LEFT, OFF_ROAD_RIGHT, OBJECT_LEFT, OBJECT_RIGHT, OBJECT_MIDDLE, };
+			FORB_LEFT, FORB_RIGHT, OFF_ROAD_LEFT, OFF_ROAD_RIGHT, OBJECT_LEFT, OBJECT_RIGHT, OBJECT_MIDDLE, CAN_GO_LEFT,
+			CAN_GO_RIGHT, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Event Type</b></em>' enumerators.
@@ -351,6 +400,10 @@ public enum EventType implements Enumerator {
 			return OBJECT_RIGHT;
 		case OBJECT_MIDDLE_VALUE:
 			return OBJECT_MIDDLE;
+		case CAN_GO_LEFT_VALUE:
+			return CAN_GO_LEFT;
+		case CAN_GO_RIGHT_VALUE:
+			return CAN_GO_RIGHT;
 		}
 		return null;
 	}

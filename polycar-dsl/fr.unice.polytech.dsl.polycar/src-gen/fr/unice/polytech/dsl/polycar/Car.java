@@ -17,6 +17,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link fr.unice.polytech.dsl.polycar.Car#getRightMotor <em>Right Motor</em>}</li>
  *   <li>{@link fr.unice.polytech.dsl.polycar.Car#getEnvironmentEvents <em>Environment Events</em>}</li>
  *   <li>{@link fr.unice.polytech.dsl.polycar.Car#getLeftMotor <em>Left Motor</em>}</li>
+ *   <li>{@link fr.unice.polytech.dsl.polycar.Car#getDefaultAction <em>Default Action</em>}</li>
  * </ul>
  *
  * @see fr.unice.polytech.dsl.polycar.PolycarPackage#getCar()
@@ -107,5 +108,31 @@ public interface Car extends NamedElement {
 	 * @generated
 	 */
 	void setLeftMotor(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Action</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Default Action</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Action</em>' reference.
+	 * @see #setDefaultAction(Action)
+	 * @see fr.unice.polytech.dsl.polycar.PolycarPackage#getCar_DefaultAction()
+	 * @model
+	 * @generated
+	 */
+	Action getDefaultAction();
+
+	/**
+	 * Sets the value of the '{@link fr.unice.polytech.dsl.polycar.Car#getDefaultAction <em>Default Action</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Action</em>' reference.
+	 * @see #getDefaultAction()
+	 * @generated
+	 */
+	void setDefaultAction(Action value);
 
 } // Car

@@ -26,6 +26,8 @@
       <genEnumLiterals ecoreEnumLiteral="polycar.ecore#//EventType/OBJECT_LEFT"/>
       <genEnumLiterals ecoreEnumLiteral="polycar.ecore#//EventType/OBJECT_RIGHT"/>
       <genEnumLiterals ecoreEnumLiteral="polycar.ecore#//EventType/OBJECT_MIDDLE"/>
+      <genEnumLiterals ecoreEnumLiteral="polycar.ecore#//EventType/CAN_GO_LEFT"/>
+      <genEnumLiterals ecoreEnumLiteral="polycar.ecore#//EventType/CAN_GO_RIGHT"/>
     </genEnums>
     <genClasses image="false" ecoreClass="polycar.ecore#//NamedElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute polycar.ecore#//NamedElement/name"/>
@@ -35,6 +37,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute polycar.ecore#//Car/rightMotor"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference polycar.ecore#//Car/environmentEvents"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute polycar.ecore#//Car/leftMotor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference polycar.ecore#//Car/defaultAction"/>
     </genClasses>
     <genClasses ecoreClass="polycar.ecore#//Action">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference polycar.ecore#//Action/subActions"/>

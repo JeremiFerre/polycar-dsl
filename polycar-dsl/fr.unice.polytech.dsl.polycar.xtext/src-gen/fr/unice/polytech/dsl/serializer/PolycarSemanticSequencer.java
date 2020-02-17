@@ -68,7 +68,14 @@ public class PolycarSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     Car returns Car
 	 *
 	 * Constraint:
-	 *     (name=EString actions+=Action actions+=Action* environmentEvents+=EnvironmentEvent environmentEvents+=EnvironmentEvent*)
+	 *     (
+	 *         name=EString 
+	 *         actions+=Action 
+	 *         actions+=Action* 
+	 *         environmentEvents+=EnvironmentEvent 
+	 *         environmentEvents+=EnvironmentEvent* 
+	 *         defaultAction=[Action|ID]?
+	 *     )
 	 */
 	protected void sequence_Car(ISerializationContext context, Car semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

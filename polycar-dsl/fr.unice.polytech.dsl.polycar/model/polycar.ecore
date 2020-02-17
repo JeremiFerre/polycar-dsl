@@ -11,6 +11,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="environmentEvents" upperBound="-1"
         eType="#//EnvironmentEvent" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="leftMotor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="defaultAction" eType="#//Action"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Action" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="subActions" lowerBound="1"
@@ -43,5 +44,7 @@
     <eLiterals name="OBJECT_LEFT" value="7"/>
     <eLiterals name="OBJECT_RIGHT" value="8"/>
     <eLiterals name="OBJECT_MIDDLE" value="9"/>
+    <eLiterals name="CAN_GO_LEFT" value="10"/>
+    <eLiterals name="CAN_GO_RIGHT" value="11"/>
   </eClassifiers>
 </ecore:EPackage>

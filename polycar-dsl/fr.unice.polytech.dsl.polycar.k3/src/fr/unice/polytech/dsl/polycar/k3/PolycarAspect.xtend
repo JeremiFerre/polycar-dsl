@@ -15,6 +15,7 @@ import static extension fr.unice.polytech.dsl.polycar.k3.ActionAspect.*
 import static extension fr.unice.polytech.dsl.polycar.k3.SubActionAspect.*
 import fr.unice.polytech.deantoni.vrep.polycar.JbossCar
 import fr.unice.polytech.deantoni.vrep.polycar.Direction
+import java.util.stream.Collectors
 
 /**
  * Sample aspect that gives java.io.File the ability to store Text content and save it to disk
@@ -25,11 +26,20 @@ class PolycarAspect {
 	@Main
 	def void run() {
 		println("Starting Car " + _self.name)
-		val car = new JbossCar("10.211.55.8", 19997) // Change with your V-REP machine IP (or 127.0.0.1)
+		val car = new JbossCar("10.211.55.4", 19997) // Change with your V-REP machine IP (or 127.0.0.1)
 		car.start()
-		car.goStraight(0)
+		
+		if (_self.defaultAction !== null) {
+			_self.defaultAction.run(car);
+		} else {
+			car.goStraight(0)
+		}
+		
 		while (true) {
-			_self.environmentEvents.forEach[env|env.run(car)]
+			val triggeredEvents = _self.environmentEvents.stream.filter(v|v.isTriggered(car)).collect(Collectors.toList())
+			if (!triggeredEvents.empty) {
+				triggeredEvents.get(0).run(car)
+			}
 			car.synchronize()
 		}
 	}
@@ -37,17 +47,16 @@ class PolycarAspect {
 
 @Aspect(className=EnvironmentEvent)
 class EnvironmentEventAspect {
-
-	@Step
-	def void run(JbossCar car) {
+	
+	def boolean isTriggered(JbossCar car) {
 		var trigger = false
 		switch (_self.type) {
 			case FORB_FORWARD:
-				trigger = false
+				trigger = car.readVeryLeftSensor().red
 			case FORB_LEFT:
-				trigger = false
+				trigger = car.readVeryLeftSensor().orange
 			case FORB_RIGHT:
-				trigger = false
+				trigger = car.readVeryRightSensor().orange
 			case OFF_ROAD_LEFT:
 				trigger = !car.readLeftSensor().black
 			case OFF_ROAD_RIGHT:
@@ -62,11 +71,20 @@ class EnvironmentEventAspect {
 				trigger = car.vrepObjects.stream.anyMatch(v | v.direction.equals(Direction.MIDDLE))
 			case OBJECT_RIGHT:
 				trigger = car.vrepObjects.stream.anyMatch(v | v.direction.equals(Direction.RIGHT))
+			case CAN_GO_LEFT:
+				trigger = car.readVeryLeftSensor().blue
+			case CAN_GO_RIGHT:
+				trigger = car.readVeryRightSensor().blue
 			default:
 				trigger = false
 		}
+		
+		return trigger
+	}
 
-		if (trigger) {
+	@Step
+	def void run(JbossCar car) {
+		if (_self.isTriggered(car)) {
 			_self.action.run(car)
 		}
 	}

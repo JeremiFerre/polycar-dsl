@@ -203,6 +203,19 @@ ruleCar returns [EObject current=null]
 		{
 			newLeafNode(otherlv_11, grammarAccess.getCarAccess().getRUNKeyword_11());
 		}
+		(
+			(
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getCarRule());
+					}
+				}
+				otherlv_12=RULE_ID
+				{
+					newLeafNode(otherlv_12, grammarAccess.getCarAccess().getDefaultActionActionCrossReference_12_0());
+				}
+			)
+		)?
 	)
 ;
 
@@ -616,6 +629,22 @@ ruleEventType returns [Enumerator current=null]
 			{
 				$current = grammarAccess.getEventTypeAccess().getOBJECT_MIDDLEEnumLiteralDeclaration_9().getEnumLiteral().getInstance();
 				newLeafNode(enumLiteral_9, grammarAccess.getEventTypeAccess().getOBJECT_MIDDLEEnumLiteralDeclaration_9());
+			}
+		)
+		    |
+		(
+			enumLiteral_10='CAN_GO_LEFT'
+			{
+				$current = grammarAccess.getEventTypeAccess().getCAN_GO_LEFTEnumLiteralDeclaration_10().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_10, grammarAccess.getEventTypeAccess().getCAN_GO_LEFTEnumLiteralDeclaration_10());
+			}
+		)
+		    |
+		(
+			enumLiteral_11='CAN_GO_RIGHT'
+			{
+				$current = grammarAccess.getEventTypeAccess().getCAN_GO_RIGHTEnumLiteralDeclaration_11().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_11, grammarAccess.getEventTypeAccess().getCAN_GO_RIGHTEnumLiteralDeclaration_11());
 			}
 		)
 	)

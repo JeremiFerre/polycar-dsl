@@ -14,7 +14,7 @@ Car returns Car:
 	'environments' ':'
 		environmentEvents+=EnvironmentEvent
 	    	(environmentEvents+=EnvironmentEvent)*
-	'RUN';
+	'RUN' (defaultAction=[Action])?;
 
 	
 Action returns Action:
@@ -36,7 +36,7 @@ enum EventType returns EventType:
 				FORB_FORWARD='FORB_FORWARD' | FORB_LEFT='FORB_LEFT' |
 				 FORB_RIGHT='FORB_RIGHT' | OFF_ROAD_LEFT='OFF_ROAD_LEFT'| OFF_ROAD_RIGHT='OFF_ROAD_RIGHT'|
 				 TRAFFIC_LIGHT_OFF='TRAFFIC_LIGHT_OFF' | TRAFFIC_LIGHT_ON='TRAFFIC_LIGHT_ON' | OBJECT_LEFT='OBJECT_LEFT' |
-				  OBJECT_RIGHT='OBJECT_RIGHT'| OBJECT_MIDDLE='OBJECT_MIDDLE';
+				  OBJECT_RIGHT='OBJECT_RIGHT'| OBJECT_MIDDLE='OBJECT_MIDDLE' | CAN_GO_LEFT='CAN_GO_LEFT' | CAN_GO_RIGHT='CAN_GO_RIGHT';
 				
 enum ActionType returns ActionType:
 				MOTOR_LEFT = 'MOTOR_LEFT'  | MOTOR_RIGHT = 'MOTOR_RIGHT'| SPEED = 'SPEED';

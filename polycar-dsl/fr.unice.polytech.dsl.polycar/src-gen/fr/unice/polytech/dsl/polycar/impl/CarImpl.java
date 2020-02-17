@@ -34,6 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link fr.unice.polytech.dsl.polycar.impl.CarImpl#getRightMotor <em>Right Motor</em>}</li>
  *   <li>{@link fr.unice.polytech.dsl.polycar.impl.CarImpl#getEnvironmentEvents <em>Environment Events</em>}</li>
  *   <li>{@link fr.unice.polytech.dsl.polycar.impl.CarImpl#getLeftMotor <em>Left Motor</em>}</li>
+ *   <li>{@link fr.unice.polytech.dsl.polycar.impl.CarImpl#getDefaultAction <em>Default Action</em>}</li>
  * </ul>
  *
  * @generated
@@ -98,6 +99,16 @@ public class CarImpl extends NamedElementImpl implements Car {
 	 * @ordered
 	 */
 	protected int leftMotor = LEFT_MOTOR_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getDefaultAction() <em>Default Action</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultAction()
+	 * @generated
+	 * @ordered
+	 */
+	protected Action defaultAction;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -192,6 +203,46 @@ public class CarImpl extends NamedElementImpl implements Car {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Action getDefaultAction() {
+		if (defaultAction != null && defaultAction.eIsProxy()) {
+			InternalEObject oldDefaultAction = (InternalEObject) defaultAction;
+			defaultAction = (Action) eResolveProxy(oldDefaultAction);
+			if (defaultAction != oldDefaultAction) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PolycarPackage.CAR__DEFAULT_ACTION,
+							oldDefaultAction, defaultAction));
+			}
+		}
+		return defaultAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Action basicGetDefaultAction() {
+		return defaultAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDefaultAction(Action newDefaultAction) {
+		Action oldDefaultAction = defaultAction;
+		defaultAction = newDefaultAction;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PolycarPackage.CAR__DEFAULT_ACTION, oldDefaultAction,
+					defaultAction));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -219,6 +270,10 @@ public class CarImpl extends NamedElementImpl implements Car {
 			return getEnvironmentEvents();
 		case PolycarPackage.CAR__LEFT_MOTOR:
 			return getLeftMotor();
+		case PolycarPackage.CAR__DEFAULT_ACTION:
+			if (resolve)
+				return getDefaultAction();
+			return basicGetDefaultAction();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -246,6 +301,9 @@ public class CarImpl extends NamedElementImpl implements Car {
 		case PolycarPackage.CAR__LEFT_MOTOR:
 			setLeftMotor((Integer) newValue);
 			return;
+		case PolycarPackage.CAR__DEFAULT_ACTION:
+			setDefaultAction((Action) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -270,6 +328,9 @@ public class CarImpl extends NamedElementImpl implements Car {
 		case PolycarPackage.CAR__LEFT_MOTOR:
 			setLeftMotor(LEFT_MOTOR_EDEFAULT);
 			return;
+		case PolycarPackage.CAR__DEFAULT_ACTION:
+			setDefaultAction((Action) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -290,6 +351,8 @@ public class CarImpl extends NamedElementImpl implements Car {
 			return environmentEvents != null && !environmentEvents.isEmpty();
 		case PolycarPackage.CAR__LEFT_MOTOR:
 			return leftMotor != LEFT_MOTOR_EDEFAULT;
+		case PolycarPackage.CAR__DEFAULT_ACTION:
+			return defaultAction != null;
 		}
 		return super.eIsSet(featureID);
 	}

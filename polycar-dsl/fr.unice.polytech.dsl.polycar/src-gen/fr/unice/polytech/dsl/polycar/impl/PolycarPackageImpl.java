@@ -209,6 +209,15 @@ public class PolycarPackageImpl extends EPackageImpl implements PolycarPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getCar_DefaultAction() {
+		return (EReference) carEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAction() {
 		return actionEClass;
 	}
@@ -349,6 +358,7 @@ public class PolycarPackageImpl extends EPackageImpl implements PolycarPackage {
 		createEAttribute(carEClass, CAR__RIGHT_MOTOR);
 		createEReference(carEClass, CAR__ENVIRONMENT_EVENTS);
 		createEAttribute(carEClass, CAR__LEFT_MOTOR);
+		createEReference(carEClass, CAR__DEFAULT_ACTION);
 
 		actionEClass = createEClass(ACTION);
 		createEReference(actionEClass, ACTION__SUB_ACTIONS);
@@ -417,6 +427,9 @@ public class PolycarPackageImpl extends EPackageImpl implements PolycarPackage {
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCar_LeftMotor(), ecorePackage.getEInt(), "leftMotor", null, 0, 1, Car.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCar_DefaultAction(), this.getAction(), null, "defaultAction", null, 0, 1, Car.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(actionEClass, Action.class, "Action", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAction_SubActions(), this.getSubAction(), null, "subActions", null, 1, -1, Action.class,
@@ -459,6 +472,8 @@ public class PolycarPackageImpl extends EPackageImpl implements PolycarPackage {
 		addEEnumLiteral(eventTypeEEnum, EventType.OBJECT_LEFT);
 		addEEnumLiteral(eventTypeEEnum, EventType.OBJECT_RIGHT);
 		addEEnumLiteral(eventTypeEEnum, EventType.OBJECT_MIDDLE);
+		addEEnumLiteral(eventTypeEEnum, EventType.CAN_GO_LEFT);
+		addEEnumLiteral(eventTypeEEnum, EventType.CAN_GO_RIGHT);
 
 		// Create resource
 		createResource(eNS_URI);

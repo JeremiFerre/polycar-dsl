@@ -49,6 +49,7 @@ public class CarItemProvider extends NamedElementItemProvider {
 
 			addRightMotorPropertyDescriptor(object);
 			addLeftMotorPropertyDescriptor(object);
+			addDefaultActionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -81,6 +82,21 @@ public class CarItemProvider extends NamedElementItemProvider {
 						getString("_UI_PropertyDescriptor_description", "_UI_Car_leftMotor_feature", "_UI_Car_type"),
 						PolycarPackage.Literals.CAR__LEFT_MOTOR, true, false, false,
 						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Action feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultActionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Car_defaultAction_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Car_defaultAction_feature",
+								"_UI_Car_type"),
+						PolycarPackage.Literals.CAR__DEFAULT_ACTION, true, false, true, null, null, null));
 	}
 
 	/**

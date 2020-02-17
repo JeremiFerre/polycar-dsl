@@ -316,6 +316,18 @@ rule__EventType__Alternatives
 		('OBJECT_MIDDLE')
 		{ after(grammarAccess.getEventTypeAccess().getOBJECT_MIDDLEEnumLiteralDeclaration_9()); }
 	)
+	|
+	(
+		{ before(grammarAccess.getEventTypeAccess().getCAN_GO_LEFTEnumLiteralDeclaration_10()); }
+		('CAN_GO_LEFT')
+		{ after(grammarAccess.getEventTypeAccess().getCAN_GO_LEFTEnumLiteralDeclaration_10()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getEventTypeAccess().getCAN_GO_RIGHTEnumLiteralDeclaration_11()); }
+		('CAN_GO_RIGHT')
+		{ after(grammarAccess.getEventTypeAccess().getCAN_GO_RIGHTEnumLiteralDeclaration_11()); }
+	)
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -651,6 +663,7 @@ rule__Car__Group__11
 	}
 :
 	rule__Car__Group__11__Impl
+	rule__Car__Group__12
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -665,6 +678,32 @@ rule__Car__Group__11__Impl
 	{ before(grammarAccess.getCarAccess().getRUNKeyword_11()); }
 	'RUN'
 	{ after(grammarAccess.getCarAccess().getRUNKeyword_11()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Car__Group__12
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__Car__Group__12__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Car__Group__12__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getCarAccess().getDefaultActionAssignment_12()); }
+	(rule__Car__DefaultActionAssignment_12)?
+	{ after(grammarAccess.getCarAccess().getDefaultActionAssignment_12()); }
 )
 ;
 finally {
@@ -1335,6 +1374,25 @@ rule__Car__EnvironmentEventsAssignment_10
 		{ before(grammarAccess.getCarAccess().getEnvironmentEventsEnvironmentEventParserRuleCall_10_0()); }
 		ruleEnvironmentEvent
 		{ after(grammarAccess.getCarAccess().getEnvironmentEventsEnvironmentEventParserRuleCall_10_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Car__DefaultActionAssignment_12
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getCarAccess().getDefaultActionActionCrossReference_12_0()); }
+		(
+			{ before(grammarAccess.getCarAccess().getDefaultActionActionIDTerminalRuleCall_12_0_1()); }
+			RULE_ID
+			{ after(grammarAccess.getCarAccess().getDefaultActionActionIDTerminalRuleCall_12_0_1()); }
+		)
+		{ after(grammarAccess.getCarAccess().getDefaultActionActionCrossReference_12_0()); }
 	)
 ;
 finally {

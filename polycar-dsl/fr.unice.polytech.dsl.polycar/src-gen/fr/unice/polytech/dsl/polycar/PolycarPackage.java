@@ -151,13 +151,22 @@ public interface PolycarPackage extends EPackage {
 	int CAR__LEFT_MOTOR = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Default Action</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAR__DEFAULT_ACTION = NAMED_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Car</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAR_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int CAR_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Car</em>' class.
@@ -420,6 +429,17 @@ public interface PolycarPackage extends EPackage {
 	EAttribute getCar_LeftMotor();
 
 	/**
+	 * Returns the meta object for the reference '{@link fr.unice.polytech.dsl.polycar.Car#getDefaultAction <em>Default Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Default Action</em>'.
+	 * @see fr.unice.polytech.dsl.polycar.Car#getDefaultAction()
+	 * @see #getCar()
+	 * @generated
+	 */
+	EReference getCar_DefaultAction();
+
+	/**
 	 * Returns the meta object for class '{@link fr.unice.polytech.dsl.polycar.Action <em>Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -627,6 +647,14 @@ public interface PolycarPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CAR__LEFT_MOTOR = eINSTANCE.getCar_LeftMotor();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Action</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CAR__DEFAULT_ACTION = eINSTANCE.getCar_DefaultAction();
 
 		/**
 		 * The meta object literal for the '{@link fr.unice.polytech.dsl.polycar.impl.ActionImpl <em>Action</em>}' class.

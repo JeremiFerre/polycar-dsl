@@ -288,14 +288,22 @@ public class PolycarGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	public class EIntElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.unice.polytech.dsl.Polycar.EInt");
-		private final RuleCall cINTTerminalRuleCall = (RuleCall)rule.eContents().get(1);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cHyphenMinusKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		
 		//EInt ecore::EInt:
-		//	INT;
+		//	'-'? INT;
 		@Override public ParserRule getRule() { return rule; }
 		
+		//'-'? INT
+		public Group getGroup() { return cGroup; }
+		
+		//'-'?
+		public Keyword getHyphenMinusKeyword_0() { return cHyphenMinusKeyword_0; }
+		
 		//INT
-		public RuleCall getINTTerminalRuleCall() { return cINTTerminalRuleCall; }
+		public RuleCall getINTTerminalRuleCall_1() { return cINTTerminalRuleCall_1; }
 	}
 	
 	public class EventTypeElements extends AbstractEnumRuleElementFinder {
@@ -315,14 +323,22 @@ public class PolycarGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cTRAFFIC_LIGHT_OFFTRAFFIC_LIGHT_OFFKeyword_5_0 = (Keyword)cTRAFFIC_LIGHT_OFFEnumLiteralDeclaration_5.eContents().get(0);
 		private final EnumLiteralDeclaration cTRAFFIC_LIGHT_ONEnumLiteralDeclaration_6 = (EnumLiteralDeclaration)cAlternatives.eContents().get(6);
 		private final Keyword cTRAFFIC_LIGHT_ONTRAFFIC_LIGHT_ONKeyword_6_0 = (Keyword)cTRAFFIC_LIGHT_ONEnumLiteralDeclaration_6.eContents().get(0);
+		private final EnumLiteralDeclaration cOBJECT_LEFTEnumLiteralDeclaration_7 = (EnumLiteralDeclaration)cAlternatives.eContents().get(7);
+		private final Keyword cOBJECT_LEFTOBJECT_LEFTKeyword_7_0 = (Keyword)cOBJECT_LEFTEnumLiteralDeclaration_7.eContents().get(0);
+		private final EnumLiteralDeclaration cOBJECT_RIGHTEnumLiteralDeclaration_8 = (EnumLiteralDeclaration)cAlternatives.eContents().get(8);
+		private final Keyword cOBJECT_RIGHTOBJECT_RIGHTKeyword_8_0 = (Keyword)cOBJECT_RIGHTEnumLiteralDeclaration_8.eContents().get(0);
+		private final EnumLiteralDeclaration cOBJECT_MIDDLEEnumLiteralDeclaration_9 = (EnumLiteralDeclaration)cAlternatives.eContents().get(9);
+		private final Keyword cOBJECT_MIDDLEOBJECT_MIDDLEKeyword_9_0 = (Keyword)cOBJECT_MIDDLEEnumLiteralDeclaration_9.eContents().get(0);
 		
 		//enum EventType:
 		//	FORB_FORWARD | FORB_LEFT |
 		//	FORB_RIGHT | OFF_ROAD_LEFT | OFF_ROAD_RIGHT |
-		//	TRAFFIC_LIGHT_OFF | TRAFFIC_LIGHT_ON;
+		//	TRAFFIC_LIGHT_OFF | TRAFFIC_LIGHT_ON | OBJECT_LEFT |
+		//	OBJECT_RIGHT | OBJECT_MIDDLE;
 		public EnumRule getRule() { return rule; }
 		
-		//FORB_FORWARD | FORB_LEFT | FORB_RIGHT | OFF_ROAD_LEFT | OFF_ROAD_RIGHT | TRAFFIC_LIGHT_OFF | TRAFFIC_LIGHT_ON
+		//FORB_FORWARD | FORB_LEFT | FORB_RIGHT | OFF_ROAD_LEFT | OFF_ROAD_RIGHT | TRAFFIC_LIGHT_OFF | TRAFFIC_LIGHT_ON |
+		//OBJECT_LEFT | OBJECT_RIGHT | OBJECT_MIDDLE
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//FORB_FORWARD
@@ -366,6 +382,24 @@ public class PolycarGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//'TRAFFIC_LIGHT_ON'
 		public Keyword getTRAFFIC_LIGHT_ONTRAFFIC_LIGHT_ONKeyword_6_0() { return cTRAFFIC_LIGHT_ONTRAFFIC_LIGHT_ONKeyword_6_0; }
+		
+		//OBJECT_LEFT
+		public EnumLiteralDeclaration getOBJECT_LEFTEnumLiteralDeclaration_7() { return cOBJECT_LEFTEnumLiteralDeclaration_7; }
+		
+		//'OBJECT_LEFT'
+		public Keyword getOBJECT_LEFTOBJECT_LEFTKeyword_7_0() { return cOBJECT_LEFTOBJECT_LEFTKeyword_7_0; }
+		
+		//OBJECT_RIGHT
+		public EnumLiteralDeclaration getOBJECT_RIGHTEnumLiteralDeclaration_8() { return cOBJECT_RIGHTEnumLiteralDeclaration_8; }
+		
+		//'OBJECT_RIGHT'
+		public Keyword getOBJECT_RIGHTOBJECT_RIGHTKeyword_8_0() { return cOBJECT_RIGHTOBJECT_RIGHTKeyword_8_0; }
+		
+		//OBJECT_MIDDLE
+		public EnumLiteralDeclaration getOBJECT_MIDDLEEnumLiteralDeclaration_9() { return cOBJECT_MIDDLEEnumLiteralDeclaration_9; }
+		
+		//'OBJECT_MIDDLE'
+		public Keyword getOBJECT_MIDDLEOBJECT_MIDDLEKeyword_9_0() { return cOBJECT_MIDDLEOBJECT_MIDDLEKeyword_9_0; }
 	}
 	public class ActionTypeElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "fr.unice.polytech.dsl.Polycar.ActionType");
@@ -512,7 +546,8 @@ public class PolycarGrammarAccess extends AbstractGrammarElementFinder {
 	//enum EventType:
 	//	FORB_FORWARD | FORB_LEFT |
 	//	FORB_RIGHT | OFF_ROAD_LEFT | OFF_ROAD_RIGHT |
-	//	TRAFFIC_LIGHT_OFF | TRAFFIC_LIGHT_ON;
+	//	TRAFFIC_LIGHT_OFF | TRAFFIC_LIGHT_ON | OBJECT_LEFT |
+	//	OBJECT_RIGHT | OBJECT_MIDDLE;
 	public EventTypeElements getEventTypeAccess() {
 		return eEventType;
 	}
@@ -542,7 +577,7 @@ public class PolycarGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//EInt ecore::EInt:
-	//	INT;
+	//	'-'? INT;
 	public EIntElements getEIntAccess() {
 		return pEInt;
 	}

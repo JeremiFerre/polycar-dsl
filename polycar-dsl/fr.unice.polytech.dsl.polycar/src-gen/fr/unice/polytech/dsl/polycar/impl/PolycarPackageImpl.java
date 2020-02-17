@@ -10,8 +10,8 @@ import fr.unice.polytech.dsl.polycar.EventType;
 import fr.unice.polytech.dsl.polycar.NamedElement;
 import fr.unice.polytech.dsl.polycar.PolycarFactory;
 import fr.unice.polytech.dsl.polycar.PolycarPackage;
-
 import fr.unice.polytech.dsl.polycar.SubAction;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -456,6 +456,9 @@ public class PolycarPackageImpl extends EPackageImpl implements PolycarPackage {
 		addEEnumLiteral(eventTypeEEnum, EventType.FORB_RIGHT);
 		addEEnumLiteral(eventTypeEEnum, EventType.OFF_ROAD_LEFT);
 		addEEnumLiteral(eventTypeEEnum, EventType.OFF_ROAD_RIGHT);
+		addEEnumLiteral(eventTypeEEnum, EventType.OBJECT_LEFT);
+		addEEnumLiteral(eventTypeEEnum, EventType.OBJECT_RIGHT);
+		addEEnumLiteral(eventTypeEEnum, EventType.OBJECT_MIDDLE);
 
 		// Create resource
 		createResource(eNS_URI);

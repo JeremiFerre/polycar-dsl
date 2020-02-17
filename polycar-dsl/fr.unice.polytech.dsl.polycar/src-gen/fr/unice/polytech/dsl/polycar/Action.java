@@ -21,7 +21,6 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface Action extends NamedElement {
-
 	/**
 	 * Returns the value of the '<em><b>Sub Actions</b></em>' containment reference list.
 	 * The list contents are of type {@link fr.unice.polytech.dsl.polycar.SubAction}.
@@ -37,4 +36,5 @@ public interface Action extends NamedElement {
 	 * @generated
 	 */
 	EList<SubAction> getSubActions();
+
 } // Action

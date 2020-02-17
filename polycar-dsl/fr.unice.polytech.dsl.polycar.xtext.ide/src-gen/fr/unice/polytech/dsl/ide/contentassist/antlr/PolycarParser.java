@@ -41,6 +41,7 @@ public class PolycarParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getSubActionAccess().getGroup(), "rule__SubAction__Group__0");
 			builder.put(grammarAccess.getSubActionAccess().getGroup_1(), "rule__SubAction__Group_1__0");
 			builder.put(grammarAccess.getSubActionAccess().getGroup_1_4(), "rule__SubAction__Group_1_4__0");
+			builder.put(grammarAccess.getEIntAccess().getGroup(), "rule__EInt__Group__0");
 			builder.put(grammarAccess.getCarAccess().getNameAssignment_2(), "rule__Car__NameAssignment_2");
 			builder.put(grammarAccess.getCarAccess().getActionsAssignment_5(), "rule__Car__ActionsAssignment_5");
 			builder.put(grammarAccess.getCarAccess().getActionsAssignment_6(), "rule__Car__ActionsAssignment_6");

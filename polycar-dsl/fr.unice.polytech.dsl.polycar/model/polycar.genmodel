@@ -23,6 +23,9 @@
       <genEnumLiterals ecoreEnumLiteral="polycar.ecore#//EventType/FORB_RIGHT"/>
       <genEnumLiterals ecoreEnumLiteral="polycar.ecore#//EventType/OFF_ROAD_LEFT"/>
       <genEnumLiterals ecoreEnumLiteral="polycar.ecore#//EventType/OFF_ROAD_RIGHT"/>
+      <genEnumLiterals ecoreEnumLiteral="polycar.ecore#//EventType/OBJECT_LEFT"/>
+      <genEnumLiterals ecoreEnumLiteral="polycar.ecore#//EventType/OBJECT_RIGHT"/>
+      <genEnumLiterals ecoreEnumLiteral="polycar.ecore#//EventType/OBJECT_MIDDLE"/>
     </genEnums>
     <genClasses image="false" ecoreClass="polycar.ecore#//NamedElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute polycar.ecore#//NamedElement/name"/>

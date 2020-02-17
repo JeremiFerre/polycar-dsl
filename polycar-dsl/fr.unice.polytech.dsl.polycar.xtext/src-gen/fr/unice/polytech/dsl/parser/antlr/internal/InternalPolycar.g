@@ -512,13 +512,22 @@ ruleEInt returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 @after {
 	leaveRule();
 }:
-	this_INT_0=RULE_INT
-	{
-		$current.merge(this_INT_0);
-	}
-	{
-		newLeafNode(this_INT_0, grammarAccess.getEIntAccess().getINTTerminalRuleCall());
-	}
+	(
+		(
+			kw='-'
+			{
+				$current.merge(kw);
+				newLeafNode(kw, grammarAccess.getEIntAccess().getHyphenMinusKeyword_0());
+			}
+		)?
+		this_INT_1=RULE_INT
+		{
+			$current.merge(this_INT_1);
+		}
+		{
+			newLeafNode(this_INT_1, grammarAccess.getEIntAccess().getINTTerminalRuleCall_1());
+		}
+	)
 ;
 
 // Rule EventType
@@ -583,6 +592,30 @@ ruleEventType returns [Enumerator current=null]
 			{
 				$current = grammarAccess.getEventTypeAccess().getTRAFFIC_LIGHT_ONEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
 				newLeafNode(enumLiteral_6, grammarAccess.getEventTypeAccess().getTRAFFIC_LIGHT_ONEnumLiteralDeclaration_6());
+			}
+		)
+		    |
+		(
+			enumLiteral_7='OBJECT_LEFT'
+			{
+				$current = grammarAccess.getEventTypeAccess().getOBJECT_LEFTEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_7, grammarAccess.getEventTypeAccess().getOBJECT_LEFTEnumLiteralDeclaration_7());
+			}
+		)
+		    |
+		(
+			enumLiteral_8='OBJECT_RIGHT'
+			{
+				$current = grammarAccess.getEventTypeAccess().getOBJECT_RIGHTEnumLiteralDeclaration_8().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_8, grammarAccess.getEventTypeAccess().getOBJECT_RIGHTEnumLiteralDeclaration_8());
+			}
+		)
+		    |
+		(
+			enumLiteral_9='OBJECT_MIDDLE'
+			{
+				$current = grammarAccess.getEventTypeAccess().getOBJECT_MIDDLEEnumLiteralDeclaration_9().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_9, grammarAccess.getEventTypeAccess().getOBJECT_MIDDLEEnumLiteralDeclaration_9());
 			}
 		)
 	)

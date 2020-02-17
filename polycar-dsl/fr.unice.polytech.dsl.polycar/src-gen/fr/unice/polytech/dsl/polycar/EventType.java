@@ -67,6 +67,7 @@ public enum EventType implements Enumerator {
 	 * @ordered
 	 */
 	FORB_RIGHT(4, "FORB_RIGHT", "FORB_RIGHT"),
+
 	/**
 	 * The '<em><b>OFF ROAD LEFT</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -76,15 +77,46 @@ public enum EventType implements Enumerator {
 	 * @ordered
 	 */
 	OFF_ROAD_LEFT(5, "OFF_ROAD_LEFT", "OFF_ROAD_LEFT"),
+
 	/**
 	 * The '<em><b>OFF ROAD RIGHT</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #OFF_ROAD_RIGHT_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	OFF_ROAD_RIGHT(6, "OFF_ROAD_RIGHT", "OFF_ROAD_RIGHT");
+	OFF_ROAD_RIGHT(6, "OFF_ROAD_RIGHT", "OFF_ROAD_RIGHT"),
+
+	/**
+	 * The '<em><b>OBJECT LEFT</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #OBJECT_LEFT_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	OBJECT_LEFT(7, "OBJECT_LEFT", "OBJECT_LEFT"),
+
+	/**
+	 * The '<em><b>OBJECT RIGHT</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #OBJECT_RIGHT_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	OBJECT_RIGHT(8, "OBJECT_RIGHT", "OBJECT_RIGHT"),
+
+	/**
+	 * The '<em><b>OBJECT MIDDLE</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #OBJECT_MIDDLE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	OBJECT_MIDDLE(9, "OBJECT_MIDDLE", "OBJECT_MIDDLE");
 
 	/**
 	 * The '<em><b>TRAFFIC LIGHT ON</b></em>' literal value.
@@ -192,13 +224,58 @@ public enum EventType implements Enumerator {
 	public static final int OFF_ROAD_RIGHT_VALUE = 6;
 
 	/**
+	 * The '<em><b>OBJECT LEFT</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>OBJECT LEFT</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #OBJECT_LEFT
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int OBJECT_LEFT_VALUE = 7;
+
+	/**
+	 * The '<em><b>OBJECT RIGHT</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>OBJECT RIGHT</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #OBJECT_RIGHT
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int OBJECT_RIGHT_VALUE = 8;
+
+	/**
+	 * The '<em><b>OBJECT MIDDLE</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>OBJECT MIDDLE</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #OBJECT_MIDDLE
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int OBJECT_MIDDLE_VALUE = 9;
+
+	/**
 	 * An array of all the '<em><b>Event Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private static final EventType[] VALUES_ARRAY = new EventType[] { TRAFFIC_LIGHT_ON, TRAFFIC_LIGHT_OFF, FORB_FORWARD,
-			FORB_LEFT, FORB_RIGHT, OFF_ROAD_LEFT, OFF_ROAD_RIGHT, };
+			FORB_LEFT, FORB_RIGHT, OFF_ROAD_LEFT, OFF_ROAD_RIGHT, OBJECT_LEFT, OBJECT_RIGHT, OBJECT_MIDDLE, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Event Type</b></em>' enumerators.
@@ -268,6 +345,12 @@ public enum EventType implements Enumerator {
 			return OFF_ROAD_LEFT;
 		case OFF_ROAD_RIGHT_VALUE:
 			return OFF_ROAD_RIGHT;
+		case OBJECT_LEFT_VALUE:
+			return OBJECT_LEFT;
+		case OBJECT_RIGHT_VALUE:
+			return OBJECT_RIGHT;
+		case OBJECT_MIDDLE_VALUE:
+			return OBJECT_MIDDLE;
 		}
 		return null;
 	}

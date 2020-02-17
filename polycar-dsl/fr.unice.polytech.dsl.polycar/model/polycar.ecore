@@ -40,5 +40,8 @@
     <eLiterals name="FORB_RIGHT" value="4"/>
     <eLiterals name="OFF_ROAD_LEFT" value="5" literal="OFF_ROAD_LEFT"/>
     <eLiterals name="OFF_ROAD_RIGHT" value="6"/>
+    <eLiterals name="OBJECT_LEFT" value="7"/>
+    <eLiterals name="OBJECT_RIGHT" value="8"/>
+    <eLiterals name="OBJECT_MIDDLE" value="9"/>
   </eClassifiers>
 </ecore:EPackage>

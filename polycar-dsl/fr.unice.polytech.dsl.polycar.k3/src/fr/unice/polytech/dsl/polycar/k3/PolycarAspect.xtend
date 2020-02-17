@@ -13,6 +13,8 @@ import fr.inria.diverse.k3.al.annotationprocessor.Step
 import static extension fr.unice.polytech.dsl.polycar.k3.EnvironmentEventAspect.*
 import static extension fr.unice.polytech.dsl.polycar.k3.ActionAspect.*
 import static extension fr.unice.polytech.dsl.polycar.k3.SubActionAspect.*
+import fr.unice.polytech.deantoni.vrep.polycar.JbossCar
+import fr.unice.polytech.deantoni.vrep.polycar.Direction
 
 /**
  * Sample aspect that gives java.io.File the ability to store Text content and save it to disk
@@ -23,9 +25,9 @@ class PolycarAspect {
 	@Main
 	def void run() {
 		println("Starting Car " + _self.name)
-		val car = new PolyCar("10.211.55.4", 19997) // Change with your V-REP machine IP (or 127.0.0.1)
+		val car = new JbossCar("10.211.55.8", 19997) // Change with your V-REP machine IP (or 127.0.0.1)
 		car.start()
-		car.goStraight(10)
+		car.goStraight(0)
 		while (true) {
 			_self.environmentEvents.forEach[env|env.run(car)]
 			car.synchronize()
@@ -37,7 +39,7 @@ class PolycarAspect {
 class EnvironmentEventAspect {
 
 	@Step
-	def void run(PolyCar car) {
+	def void run(JbossCar car) {
 		var trigger = false
 		switch (_self.type) {
 			case FORB_FORWARD:
@@ -54,6 +56,12 @@ class EnvironmentEventAspect {
 				trigger = car.readVeryRightSensor().red
 			case TRAFFIC_LIGHT_ON:
 				trigger = car.readVeryRightSensor().green
+			case OBJECT_LEFT:
+				trigger = car.vrepObjects.stream.anyMatch(v | v.direction.equals(Direction.LEFT))
+			case OBJECT_MIDDLE:
+				trigger = car.vrepObjects.stream.anyMatch(v | v.direction.equals(Direction.MIDDLE))
+			case OBJECT_RIGHT:
+				trigger = car.vrepObjects.stream.anyMatch(v | v.direction.equals(Direction.RIGHT))
 			default:
 				trigger = false
 		}
@@ -92,8 +100,10 @@ class SubActionAspect {
 				car.leftSpeed = _self.value
 			case MOTOR_RIGHT:
 				car.rightSpeed = _self.value
-			case SPEED:
+			case SPEED: {
+				println(_self.value)
 				car.goStraight(_self.value)
+				}
 		}
 	}
 }

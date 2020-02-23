@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:fr.unice.polytech.dsl.polycar="http://fr.unice.polytech.dsl.polycar" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_qZ9CgFGiEeqR5NQf565Yjw" selectedViews="_qz8P0FGiEeqR5NQf565Yjw" version="14.1.0.201810161215">
+    <semanticResources>test.pl</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_qz8P0FGiEeqR5NQf565Yjw">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_7ZUts1GiEeqR5NQf565Yjw" name="new Car" repPath="#_7ZS4gFGiEeqR5NQf565Yjw">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']"/>
+        <target xmi:type="fr.unice.polytech.dsl.polycar:Car" href="test.pl#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_7ZS4gFGiEeqR5NQf565Yjw" name="new Car">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_7ZUtsFGiEeqR5NQf565Yjw" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_7ZUtsVGiEeqR5NQf565Yjw"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_7ZVUwFGiEeqR5NQf565Yjw" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_7ZVUwVGiEeqR5NQf565Yjw" type="Sirius" element="_7ZS4gFGiEeqR5NQf565Yjw" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_cxVl0FGkEeqR5NQf565Yjw" type="2002" element="_cxHjYFGkEeqR5NQf565Yjw">
+          <children xmi:type="notation:Node" xmi:id="_cxYCEFGkEeqR5NQf565Yjw" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_cxYCEVGkEeqR5NQf565Yjw" type="7001">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_cxYCElGkEeqR5NQf565Yjw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_cxYCE1GkEeqR5NQf565Yjw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_cxVl0VGkEeqR5NQf565Yjw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cxVl0lGkEeqR5NQf565Yjw" x="-104" y="28"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_cxYpIFGkEeqR5NQf565Yjw" type="2002" element="_cxSigVGkEeqR5NQf565Yjw">
+          <children xmi:type="notation:Node" xmi:id="_cxYpI1GkEeqR5NQf565Yjw" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_cxYpJFGkEeqR5NQf565Yjw" type="7001">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_cxYpJVGkEeqR5NQf565Yjw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_cxYpJlGkEeqR5NQf565Yjw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_cxYpIVGkEeqR5NQf565Yjw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cxYpIlGkEeqR5NQf565Yjw" x="104" y="28"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_cxYpJ1GkEeqR5NQf565Yjw" type="2002" element="_cxTJklGkEeqR5NQf565Yjw">
+          <children xmi:type="notation:Node" xmi:id="_cxZQMFGkEeqR5NQf565Yjw" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_cxZQMVGkEeqR5NQf565Yjw" type="7001">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_cxZQMlGkEeqR5NQf565Yjw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_cxZQM1GkEeqR5NQf565Yjw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_cxYpKFGkEeqR5NQf565Yjw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cxYpKVGkEeqR5NQf565Yjw" x="312" y="28"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_cxZQNFGkEeqR5NQf565Yjw" type="2002" element="_cxTJlVGkEeqR5NQf565Yjw">
+          <children xmi:type="notation:Node" xmi:id="_cxZ3QFGkEeqR5NQf565Yjw" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_cxZ3QVGkEeqR5NQf565Yjw" type="7001">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_cxZ3QlGkEeqR5NQf565Yjw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_cxZ3Q1GkEeqR5NQf565Yjw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_cxZQNVGkEeqR5NQf565Yjw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cxZQNlGkEeqR5NQf565Yjw" x="524" y="28"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_cxZ3RFGkEeqR5NQf565Yjw" type="2002" element="_cxTwoVGkEeqR5NQf565Yjw">
+          <children xmi:type="notation:Node" xmi:id="_cxZ3R1GkEeqR5NQf565Yjw" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_cxZ3SFGkEeqR5NQf565Yjw" type="7001">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_cxZ3SVGkEeqR5NQf565Yjw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_cxZ3SlGkEeqR5NQf565Yjw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_cxZ3RVGkEeqR5NQf565Yjw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cxZ3RlGkEeqR5NQf565Yjw" x="736" y="28"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_ssaXgFPKEeqH1tujQ4lZig" type="2001" element="_sorHAFPKEeqH1tujQ4lZig">
+          <children xmi:type="notation:Node" xmi:id="_sshFMFPKEeqH1tujQ4lZig" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_sshFMVPKEeqH1tujQ4lZig" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Qa1xAFXHEeqdQL-2mBJQjA" type="3003" element="_QZo3IFXHEeqdQL-2mBJQjA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Qa1xAVXHEeqdQL-2mBJQjA" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Qa1xAlXHEeqdQL-2mBJQjA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_ssaXgVPKEeqH1tujQ4lZig" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ssaXglPKEeqH1tujQ4lZig" x="952" y="148" width="169" height="113"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_ssmkwFPKEeqH1tujQ4lZig" type="2001" element="_ssBV8FPKEeqH1tujQ4lZig">
+          <children xmi:type="notation:Node" xmi:id="_ssnL0FPKEeqH1tujQ4lZig" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_ssnL0VPKEeqH1tujQ4lZig" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Qa73oFXHEeqdQL-2mBJQjA" type="3003" element="_QZwL4VXHEeqdQL-2mBJQjA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Qa73oVXHEeqdQL-2mBJQjA" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Qa73olXHEeqdQL-2mBJQjA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_ssmkwVPKEeqH1tujQ4lZig" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ssmkwlPKEeqH1tujQ4lZig" x="1152" y="140" width="169" height="113"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_ssnL0lPKEeqH1tujQ4lZig" type="2001" element="_ssB9AlPKEeqH1tujQ4lZig">
+          <children xmi:type="notation:Node" xmi:id="_ssny4FPKEeqH1tujQ4lZig" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_ssny4VPKEeqH1tujQ4lZig" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Qa8esFXHEeqdQL-2mBJQjA" type="3003" element="_QZ1EYVXHEeqdQL-2mBJQjA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Qa8esVXHEeqdQL-2mBJQjA" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Qa8eslXHEeqdQL-2mBJQjA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_ssnL01PKEeqH1tujQ4lZig" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ssnL1FPKEeqH1tujQ4lZig" x="1308" y="-101" width="169" height="113"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_ssny4lPKEeqH1tujQ4lZig" type="2001" element="_ssDLIVPKEeqH1tujQ4lZig">
+          <children xmi:type="notation:Node" xmi:id="_ssoZ8FPKEeqH1tujQ4lZig" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_ssoZ8VPKEeqH1tujQ4lZig" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Qa9FwFXHEeqdQL-2mBJQjA" type="3003" element="_QZ584VXHEeqdQL-2mBJQjA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Qa9FwVXHEeqdQL-2mBJQjA" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Qa9FwlXHEeqdQL-2mBJQjA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_ssny41PKEeqH1tujQ4lZig" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ssny5FPKEeqH1tujQ4lZig" x="1400" y="28" width="169" height="113"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_sspBAFPKEeqH1tujQ4lZig" type="2001" element="_ssEZQFPKEeqH1tujQ4lZig">
+          <children xmi:type="notation:Node" xmi:id="_sspBA1PKEeqH1tujQ4lZig" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_sspBBFPKEeqH1tujQ4lZig" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Qa9s0FXHEeqdQL-2mBJQjA" type="3003" element="_QZ9nQVXHEeqdQL-2mBJQjA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Qa9s0VXHEeqdQL-2mBJQjA" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Qa9s0lXHEeqdQL-2mBJQjA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_sspBAVPKEeqH1tujQ4lZig" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sspBAlPKEeqH1tujQ4lZig" x="1500" y="140" width="169" height="113"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_sspoEFPKEeqH1tujQ4lZig" type="2001" element="_ssFAUVPKEeqH1tujQ4lZig">
+          <children xmi:type="notation:Node" xmi:id="_sspoE1PKEeqH1tujQ4lZig" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_sspoFFPKEeqH1tujQ4lZig" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Qa9s01XHEeqdQL-2mBJQjA" type="3003" element="_QaCfwVXHEeqdQL-2mBJQjA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Qa9s1FXHEeqdQL-2mBJQjA" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Qa9s1VXHEeqdQL-2mBJQjA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_sspoEVPKEeqH1tujQ4lZig" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sspoElPKEeqH1tujQ4lZig" x="1523" y="-92" width="145" height="41"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_sspoFVPKEeqH1tujQ4lZig" type="2001" element="_ssGOcFPKEeqH1tujQ4lZig">
+          <children xmi:type="notation:Node" xmi:id="_ssqPIFPKEeqH1tujQ4lZig" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_ssqPIVPKEeqH1tujQ4lZig" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Qa-T4FXHEeqdQL-2mBJQjA" type="3003" element="_QaGxMVXHEeqdQL-2mBJQjA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Qa-T4VXHEeqdQL-2mBJQjA" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Qa-T4lXHEeqdQL-2mBJQjA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_sspoFlPKEeqH1tujQ4lZig" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sspoF1PKEeqH1tujQ4lZig" x="1539" y="-28" width="166" height="40"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_ssqPIlPKEeqH1tujQ4lZig" type="2001" element="_ssG1gVPKEeqH1tujQ4lZig">
+          <children xmi:type="notation:Node" xmi:id="_ssq2MFPKEeqH1tujQ4lZig" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_ssq2MVPKEeqH1tujQ4lZig" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Qa-68FXHEeqdQL-2mBJQjA" type="3003" element="_QaOF8VXHEeqdQL-2mBJQjA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Qa-68VXHEeqdQL-2mBJQjA" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Qa-68lXHEeqdQL-2mBJQjA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_ssqPI1PKEeqH1tujQ4lZig" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ssqPJFPKEeqH1tujQ4lZig" x="1704" y="260" width="180" height="56"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_ssq2MlPKEeqH1tujQ4lZig" type="2001" element="_ssHcklPKEeqH1tujQ4lZig">
+          <children xmi:type="notation:Node" xmi:id="_ssrdQFPKEeqH1tujQ4lZig" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_ssrdQVPKEeqH1tujQ4lZig" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Qa-681XHEeqdQL-2mBJQjA" type="3003" element="_QaRwUVXHEeqdQL-2mBJQjA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Qa-69FXHEeqdQL-2mBJQjA" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Qa-69VXHEeqdQL-2mBJQjA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_ssq2M1PKEeqH1tujQ4lZig" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ssq2NFPKEeqH1tujQ4lZig" x="1716" y="140" width="180" height="56"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_ssrdQlPKEeqH1tujQ4lZig" type="2001" element="_ssIqsVPKEeqH1tujQ4lZig">
+          <children xmi:type="notation:Node" xmi:id="_sssEUFPKEeqH1tujQ4lZig" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_sssEUVPKEeqH1tujQ4lZig" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Qa_iAFXHEeqdQL-2mBJQjA" type="3003" element="_QaWo0VXHEeqdQL-2mBJQjA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Qa_iAVXHEeqdQL-2mBJQjA" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Qa_iAlXHEeqdQL-2mBJQjA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_ssrdQ1PKEeqH1tujQ4lZig" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ssrdRFPKEeqH1tujQ4lZig" x="1724" y="34" width="180" height="56"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_sssEUlPKEeqH1tujQ4lZig" type="2001" element="_ssJRwVPKEeqH1tujQ4lZig">
+          <children xmi:type="notation:Node" xmi:id="_sssrYFPKEeqH1tujQ4lZig" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_sssrYVPKEeqH1tujQ4lZig" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_QbAJEFXHEeqdQL-2mBJQjA" type="3003" element="_Qaa6QVXHEeqdQL-2mBJQjA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_QbAJEVXHEeqdQL-2mBJQjA" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QbAJElXHEeqdQL-2mBJQjA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_sssEU1PKEeqH1tujQ4lZig" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sssEVFPKEeqH1tujQ4lZig" x="976" y="-108" width="324" height="128"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_sssrYlPKEeqH1tujQ4lZig" type="2001" element="_ssJ40lPKEeqH1tujQ4lZig">
+          <children xmi:type="notation:Node" xmi:id="_sssrZVPKEeqH1tujQ4lZig" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_sssrZlPKEeqH1tujQ4lZig" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_QbAJE1XHEeqdQL-2mBJQjA" type="3003" element="_QaekoVXHEeqdQL-2mBJQjA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_QbAJFFXHEeqdQL-2mBJQjA" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QbAJFVXHEeqdQL-2mBJQjA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_sssrY1PKEeqH1tujQ4lZig" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sssrZFPKEeqH1tujQ4lZig" x="1200" y="260" width="324" height="128"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_sstScFPKEeqH1tujQ4lZig" type="2001" element="_ssLG8FPKEeqH1tujQ4lZig">
+          <children xmi:type="notation:Node" xmi:id="_sstSc1PKEeqH1tujQ4lZig" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_sstSdFPKEeqH1tujQ4lZig" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_QbAwIFXHEeqdQL-2mBJQjA" type="3003" element="_QaiPAVXHEeqdQL-2mBJQjA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_QbAwIVXHEeqdQL-2mBJQjA" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QbAwIlXHEeqdQL-2mBJQjA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_sstScVPKEeqH1tujQ4lZig" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sstSclPKEeqH1tujQ4lZig" x="944" y="13" width="324" height="128"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_sst5gFPKEeqH1tujQ4lZig" type="2001" element="_ssLuAVPKEeqH1tujQ4lZig">
+          <children xmi:type="notation:Node" xmi:id="_sst5g1PKEeqH1tujQ4lZig" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_sst5hFPKEeqH1tujQ4lZig" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_QbBXMFXHEeqdQL-2mBJQjA" type="3003" element="_QamgcVXHEeqdQL-2mBJQjA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_QbBXMVXHEeqdQL-2mBJQjA" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QbBXMlXHEeqdQL-2mBJQjA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_sst5gVPKEeqH1tujQ4lZig" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sst5glPKEeqH1tujQ4lZig" x="760" y="292" width="324" height="128"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_ssugkFPKEeqH1tujQ4lZig" type="2002" element="_ssOKQVPKEeqH1tujQ4lZig">
+          <children xmi:type="notation:Node" xmi:id="_ssvHoFPKEeqH1tujQ4lZig" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_sswVwFPKEeqH1tujQ4lZig" type="7001">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_sswVwVPKEeqH1tujQ4lZig"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_sswVwlPKEeqH1tujQ4lZig"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_ssugkVPKEeqH1tujQ4lZig" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ssugklPKEeqH1tujQ4lZig" x="2028" y="28"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_sswVw1PKEeqH1tujQ4lZig" type="2002" element="_ssOxUVPKEeqH1tujQ4lZig">
+          <children xmi:type="notation:Node" xmi:id="_ssw80FPKEeqH1tujQ4lZig" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_ssw80VPKEeqH1tujQ4lZig" type="7001">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_ssw80lPKEeqH1tujQ4lZig"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_ssw801PKEeqH1tujQ4lZig"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_sswVxFPKEeqH1tujQ4lZig" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sswVxVPKEeqH1tujQ4lZig" x="2240" y="28"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_ssw81FPKEeqH1tujQ4lZig" type="2002" element="_ssPYYFPKEeqH1tujQ4lZig">
+          <children xmi:type="notation:Node" xmi:id="_ssxj4FPKEeqH1tujQ4lZig" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_ssxj4VPKEeqH1tujQ4lZig" type="7001">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_ssxj4lPKEeqH1tujQ4lZig"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_ssxj41PKEeqH1tujQ4lZig"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_ssw81VPKEeqH1tujQ4lZig" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ssw81lPKEeqH1tujQ4lZig" x="2448" y="28"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_7ZVUwlGiEeqR5NQf565Yjw"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_cxHjYFGkEeqR5NQf565Yjw" name="GreenLight" tooltipText="Gradient Left to Right">
+      <target xmi:type="fr.unice.polytech.dsl.polycar:Action" href="test.pl#//@actions.0"/>
+      <semanticElements xmi:type="fr.unice.polytech.dsl.polycar:Action" href="test.pl#//@actions.0"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_cxQtUFGkEeqR5NQf565Yjw" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@containerMappings[name='']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@containerMappings[name='']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_cxSigVGkEeqR5NQf565Yjw" name="RedLight" tooltipText="Gradient Left to Right">
+      <target xmi:type="fr.unice.polytech.dsl.polycar:Action" href="test.pl#//@actions.1"/>
+      <semanticElements xmi:type="fr.unice.polytech.dsl.polycar:Action" href="test.pl#//@actions.1"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_cxTJkFGkEeqR5NQf565Yjw" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@containerMappings[name='']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@containerMappings[name='']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_cxTJklGkEeqR5NQf565Yjw" name="AlignLeft" tooltipText="Gradient Left to Right">
+      <target xmi:type="fr.unice.polytech.dsl.polycar:Action" href="test.pl#//@actions.2"/>
+      <semanticElements xmi:type="fr.unice.polytech.dsl.polycar:Action" href="test.pl#//@actions.2"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_cxTJk1GkEeqR5NQf565Yjw" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@containerMappings[name='']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@containerMappings[name='']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_cxTJlVGkEeqR5NQf565Yjw" name="AlignRight" tooltipText="Gradient Left to Right">
+      <target xmi:type="fr.unice.polytech.dsl.polycar:Action" href="test.pl#//@actions.3"/>
+      <semanticElements xmi:type="fr.unice.polytech.dsl.polycar:Action" href="test.pl#//@actions.3"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_cxTJllGkEeqR5NQf565Yjw" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@containerMappings[name='']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@containerMappings[name='']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_cxTwoVGkEeqR5NQf565Yjw" name="BackWard" tooltipText="Gradient Left to Right">
+      <target xmi:type="fr.unice.polytech.dsl.polycar:Action" href="test.pl#//@actions.4"/>
+      <semanticElements xmi:type="fr.unice.polytech.dsl.polycar:Action" href="test.pl#//@actions.4"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_cxTwolGkEeqR5NQf565Yjw" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@containerMappings[name='']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@containerMappings[name='']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_sorHAFPKEeqH1tujQ4lZig" name="OBJECT_MIDDLE" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="fr.unice.polytech.dsl.polycar:EnvironmentEvent" href="test.pl#//@conditions.0/@environmentEvents.0"/>
+      <semanticElements xmi:type="fr.unice.polytech.dsl.polycar:EnvironmentEvent" href="test.pl#//@conditions.0/@environmentEvents.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_QZo3IFXHEeqdQL-2mBJQjA" labelSize="12" showIcon="false" labelPosition="node" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@nodeMappings[name='EnvEvent']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@nodeMappings[name='EnvEvent']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_ssBV8FPKEeqH1tujQ4lZig" name="OFF_ROAD_LEFT" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="fr.unice.polytech.dsl.polycar:EnvironmentEvent" href="test.pl#//@conditions.1/@environmentEvents.0"/>
+      <semanticElements xmi:type="fr.unice.polytech.dsl.polycar:EnvironmentEvent" href="test.pl#//@conditions.1/@environmentEvents.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_QZwL4VXHEeqdQL-2mBJQjA" labelSize="12" showIcon="false" labelPosition="node" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@nodeMappings[name='EnvEvent']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@nodeMappings[name='EnvEvent']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_ssB9AlPKEeqH1tujQ4lZig" name="OFF_ROAD_RIGHT" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="fr.unice.polytech.dsl.polycar:EnvironmentEvent" href="test.pl#//@conditions.2/@environmentEvents.0"/>
+      <semanticElements xmi:type="fr.unice.polytech.dsl.polycar:EnvironmentEvent" href="test.pl#//@conditions.2/@environmentEvents.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_QZ1EYVXHEeqdQL-2mBJQjA" labelSize="12" showIcon="false" labelPosition="node" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@nodeMappings[name='EnvEvent']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@nodeMappings[name='EnvEvent']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_ssDLIVPKEeqH1tujQ4lZig" name="TRAFFIC_LIGHT_OFF" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="fr.unice.polytech.dsl.polycar:EnvironmentEvent" href="test.pl#//@conditions.3/@environmentEvents.0"/>
+      <semanticElements xmi:type="fr.unice.polytech.dsl.polycar:EnvironmentEvent" href="test.pl#//@conditions.3/@environmentEvents.0"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_QZ584VXHEeqdQL-2mBJQjA" labelSize="12" showIcon="false" labelPosition="node" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@nodeMappings[name='EnvEvent']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@nodeMappings[name='EnvEvent']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_ssEZQFPKEeqH1tujQ4lZig" name="TRAFFIC_LIGHT_ON" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="fr.unice.polytech.dsl.polycar:EnvironmentEvent" href="test.pl#//@conditions.4/@environmentEvents.0"/>
+      <semanticElements xmi:type="fr.unice.polytech.dsl.polycar:EnvironmentEvent" href="test.pl#//@conditions.4/@environmentEvents.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_QZ9nQVXHEeqdQL-2mBJQjA" labelSize="12" showIcon="false" labelPosition="node" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@nodeMappings[name='EnvEvent']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@nodeMappings[name='EnvEvent']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_ssFAUVPKEeqH1tujQ4lZig" name="FORB_LEFT" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="fr.unice.polytech.dsl.polycar:EnvironmentEvent" href="test.pl#//@conditions.5/@environmentEvents.0"/>
+      <semanticElements xmi:type="fr.unice.polytech.dsl.polycar:EnvironmentEvent" href="test.pl#//@conditions.5/@environmentEvents.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_QaCfwVXHEeqdQL-2mBJQjA" labelSize="12" showIcon="false" labelPosition="node" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@nodeMappings[name='EnvEvent']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@nodeMappings[name='EnvEvent']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_ssGOcFPKEeqH1tujQ4lZig" name="FORB_RIGHT" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="fr.unice.polytech.dsl.polycar:EnvironmentEvent" href="test.pl#//@conditions.5/@environmentEvents.1"/>
+      <semanticElements xmi:type="fr.unice.polytech.dsl.polycar:EnvironmentEvent" href="test.pl#//@conditions.5/@environmentEvents.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_QaGxMVXHEeqdQL-2mBJQjA" labelSize="12" showIcon="false" labelPosition="node" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@nodeMappings[name='EnvEvent']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@nodeMappings[name='EnvEvent']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_ssG1gVPKEeqH1tujQ4lZig" name="FORB_RIGHT" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="fr.unice.polytech.dsl.polycar:EnvironmentEvent" href="test.pl#//@conditions.6/@environmentEvents.0"/>
+      <semanticElements xmi:type="fr.unice.polytech.dsl.polycar:EnvironmentEvent" href="test.pl#//@conditions.6/@environmentEvents.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_QaOF8VXHEeqdQL-2mBJQjA" labelSize="12" showIcon="false" labelPosition="node" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@nodeMappings[name='EnvEvent']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@nodeMappings[name='EnvEvent']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_ssHcklPKEeqH1tujQ4lZig" name="CAN_GO_LEFT" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="fr.unice.polytech.dsl.polycar:EnvironmentEvent" href="test.pl#//@conditions.6/@environmentEvents.1"/>
+      <semanticElements xmi:type="fr.unice.polytech.dsl.polycar:EnvironmentEvent" href="test.pl#//@conditions.6/@environmentEvents.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_QaRwUVXHEeqdQL-2mBJQjA" labelSize="12" showIcon="false" labelPosition="node" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@nodeMappings[name='EnvEvent']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@nodeMappings[name='EnvEvent']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_ssIqsVPKEeqH1tujQ4lZig" name="FORB_LEFT" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="fr.unice.polytech.dsl.polycar:EnvironmentEvent" href="test.pl#//@conditions.7/@environmentEvents.0"/>
+      <semanticElements xmi:type="fr.unice.polytech.dsl.polycar:EnvironmentEvent" href="test.pl#//@conditions.7/@environmentEvents.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_QaWo0VXHEeqdQL-2mBJQjA" labelSize="12" showIcon="false" labelPosition="node" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@nodeMappings[name='EnvEvent']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@nodeMappings[name='EnvEvent']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_ssJRwVPKEeqH1tujQ4lZig" name="CAN_GO_RIGHT" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="fr.unice.polytech.dsl.polycar:EnvironmentEvent" href="test.pl#//@conditions.7/@environmentEvents.1"/>
+      <semanticElements xmi:type="fr.unice.polytech.dsl.polycar:EnvironmentEvent" href="test.pl#//@conditions.7/@environmentEvents.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_Qaa6QVXHEeqdQL-2mBJQjA" labelSize="12" showIcon="false" labelPosition="node" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@nodeMappings[name='EnvEvent']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@nodeMappings[name='EnvEvent']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_ssJ40lPKEeqH1tujQ4lZig" name="FORB_FORWARD" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="fr.unice.polytech.dsl.polycar:EnvironmentEvent" href="test.pl#//@conditions.8/@environmentEvents.0"/>
+      <semanticElements xmi:type="fr.unice.polytech.dsl.polycar:EnvironmentEvent" href="test.pl#//@conditions.8/@environmentEvents.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_QaekoVXHEeqdQL-2mBJQjA" labelSize="12" showIcon="false" labelPosition="node" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@nodeMappings[name='EnvEvent']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@nodeMappings[name='EnvEvent']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_ssLG8FPKEeqH1tujQ4lZig" name="CAN_GO_LEFT" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="fr.unice.polytech.dsl.polycar:EnvironmentEvent" href="test.pl#//@conditions.9/@environmentEvents.0"/>
+      <semanticElements xmi:type="fr.unice.polytech.dsl.polycar:EnvironmentEvent" href="test.pl#//@conditions.9/@environmentEvents.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_QaiPAVXHEeqdQL-2mBJQjA" labelSize="12" showIcon="false" labelPosition="node" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@nodeMappings[name='EnvEvent']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@nodeMappings[name='EnvEvent']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_ssLuAVPKEeqH1tujQ4lZig" name="CAN_GO_RIGHT" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="fr.unice.polytech.dsl.polycar:EnvironmentEvent" href="test.pl#//@conditions.10/@environmentEvents.0"/>
+      <semanticElements xmi:type="fr.unice.polytech.dsl.polycar:EnvironmentEvent" href="test.pl#//@conditions.10/@environmentEvents.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_QamgcVXHEeqdQL-2mBJQjA" labelSize="12" showIcon="false" labelPosition="node" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@nodeMappings[name='EnvEvent']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@nodeMappings[name='EnvEvent']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_ssOKQVPKEeqH1tujQ4lZig" name="GoRight" tooltipText="Gradient Left to Right">
+      <target xmi:type="fr.unice.polytech.dsl.polycar:Action" href="test.pl#//@actions.5"/>
+      <semanticElements xmi:type="fr.unice.polytech.dsl.polycar:Action" href="test.pl#//@actions.5"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_ssOKQlPKEeqH1tujQ4lZig" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@containerMappings[name='']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@containerMappings[name='']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_ssOxUVPKEeqH1tujQ4lZig" name="GoRightLong" tooltipText="Gradient Left to Right">
+      <target xmi:type="fr.unice.polytech.dsl.polycar:Action" href="test.pl#//@actions.6"/>
+      <semanticElements xmi:type="fr.unice.polytech.dsl.polycar:Action" href="test.pl#//@actions.6"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_ssOxUlPKEeqH1tujQ4lZig" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@containerMappings[name='']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@containerMappings[name='']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_ssPYYFPKEeqH1tujQ4lZig" name="GoLeft" tooltipText="Gradient Left to Right">
+      <target xmi:type="fr.unice.polytech.dsl.polycar:Action" href="test.pl#//@actions.7"/>
+      <semanticElements xmi:type="fr.unice.polytech.dsl.polycar:Action" href="test.pl#//@actions.7"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_ssPYYVPKEeqH1tujQ4lZig" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@containerMappings[name='']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer/@containerMappings[name='']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_7ZS4gVGiEeqR5NQf565Yjw"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/fr.unice.polytech.dsl.polycar.design/description/polycar.odesign#//@ownedViewpoints[name='polycar']/@ownedRepresentations[name='Car']/@defaultLayer"/>
+    <target xmi:type="fr.unice.polytech.dsl.polycar:Car" href="test.pl#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

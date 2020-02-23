@@ -4,4 +4,7 @@
   <extension point="org.eclipse.gemoc.gemoc_language_workbench.xdsml">
     <XDSML_Definition name="fr.unice.polytech.dsl.polycar.Polycar" xdsmlFilePath="/fr.unice.polytech.dsl.polycar.xdsml/Polycar.dsl" modelLoader_class="org.eclipse.gemoc.executionframework.extensions.sirius.modelloader.DefaultModelLoader" />
   </extension>
+  <extension point="org.eclipse.gemoc.gemoc_language_workbench.moccml.xdsml.addition">
+    <MOCCML_XDSML_Addition name="fr.unice.polytech.dsl.polycar.Polycar" referencedXDSMLName="fr.unice.polytech.dsl.polycar.Polycar" codeExecutor_class="polycar.xdsml.api.impl.PolycarCodeExecutor" solver_class="org.eclipse.gemoc.execution.concurrent.ccsljavaengine.extensions.timesquare.moc.impl.CcslSolver" />
+  </extension>
 </plugin>

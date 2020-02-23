@@ -28,7 +28,7 @@ class PolycarAspect {
 	@Main
 	def void run() {
 		println("Starting Car " + _self.name)
-		val car = new JbossCar("10.211.55.4", 19997) // Change with your V-REP machine IP (or 127.0.0.1)
+		val car = new JbossCar("10.211.55.8", 19997) // Change with your V-REP machine IP (or 127.0.0.1)
 		car.start()
 		
 		if (_self.defaultAction !== null) {
@@ -64,39 +64,38 @@ class ConditionAspect {
 
 @Aspect(className=EnvironmentEvent)
 class EnvironmentEventAspect {
-	
+	public var Boolean trigger = false;
 	def boolean isTriggered(JbossCar car) {
-		var trigger = false
 		switch (_self.type) {
 			case FORB_FORWARD:
-				trigger = car.readVeryLeftSensor().red
+				_self.trigger = car.readVeryLeftSensor().red
 			case FORB_LEFT:
-				trigger = car.readVeryLeftSensor().orange
+				_self.trigger = car.readVeryLeftSensor().orange
 			case FORB_RIGHT:
-				trigger = car.readVeryRightSensor().orange
+				_self.trigger = car.readVeryRightSensor().orange
 			case OFF_ROAD_LEFT:
-				trigger = !car.readLeftSensor().black
+				_self.trigger = !car.readLeftSensor().black
 			case OFF_ROAD_RIGHT:
-				trigger = !car.readRightSensor().black
+				_self.trigger = !car.readRightSensor().black
 			case TRAFFIC_LIGHT_OFF:
-				trigger = car.readVeryRightSensor().red
+				_self.trigger = car.readVeryRightSensor().red
 			case TRAFFIC_LIGHT_ON:
-				trigger = car.readVeryRightSensor().green
+				_self.trigger = car.readVeryRightSensor().green
 			case OBJECT_LEFT:
-				trigger = car.vrepObjects.stream.anyMatch(v | v.direction.equals(Direction.LEFT))
+				_self.trigger = car.vrepObjects.stream.anyMatch(v | v.direction.equals(Direction.LEFT))
 			case OBJECT_MIDDLE:
-				trigger = car.vrepObjects.stream.anyMatch(v | v.direction.equals(Direction.MIDDLE))
+				_self.trigger = car.vrepObjects.stream.anyMatch(v | v.direction.equals(Direction.MIDDLE))
 			case OBJECT_RIGHT:
-				trigger = car.vrepObjects.stream.anyMatch(v | v.direction.equals(Direction.RIGHT))
+				_self.trigger = car.vrepObjects.stream.anyMatch(v | v.direction.equals(Direction.RIGHT))
 			case CAN_GO_LEFT:
-				trigger = car.readVeryLeftSensor().blue
+				_self.trigger = car.readVeryLeftSensor().blue
 			case CAN_GO_RIGHT:
-				trigger = car.readVeryRightSensor().blue
+				_self.trigger = car.readVeryRightSensor().blue
 			default:
-				trigger = false
+				_self.trigger = false
 		}
 		
-		return trigger
+		return _self.trigger
 	}
 }
 

@@ -54,7 +54,6 @@ class ConditionAspect {
 		return _self.environmentEvents.stream.allMatch(v|v.isTriggered(car))
 	}
 	
-	@Step
 	def void run(JbossCar car) {
 		if (_self.isTriggered(car)) {
 			_self.action.run(car)
@@ -120,7 +119,6 @@ class ActionAspect {
 @Aspect(className=SubAction)
 class SubActionAspect {
 
-	@Step
 	def void run(PolyCar car) {
 		switch (_self.type) {
 			case MOTOR_LEFT:

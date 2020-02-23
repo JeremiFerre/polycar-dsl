@@ -46,8 +46,8 @@
     <eLiterals name="CAN_GO_RIGHT" value="11"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Condition">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="environmentEvents" upperBound="-1"
-        eType="#//EnvironmentEvent" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="environmentEvents" lowerBound="1"
+        upperBound="-1" eType="#//EnvironmentEvent" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="action" lowerBound="1"
         eType="#//Action"/>
   </eClassifiers>

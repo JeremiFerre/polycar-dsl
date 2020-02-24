@@ -54,7 +54,7 @@ public class PolycarModelStateHelper implements IK3ModelStateHelper{
 				ElementState elemState = theFactory.createElementState();
 				elemState.setModelElement(elem);
 				res.getOwnedElementstates().add(elemState);
-				AttributeNameToValue n2v0 = new AttributeNameToValue("trigger", PolycarRTDAccessor.getTrigger((fr.unice.polytech.dsl.polycar.EnvironmentEvent)elem));
+				AttributeNameToValue n2v0 = new AttributeNameToValue("trigger", PolycarRTDAccessor.gettrigger(elem));
 				elemState.getSavedRTDs().add(n2v0);
 			}
 		}

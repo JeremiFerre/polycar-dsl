@@ -9,45 +9,43 @@ import org.eclipse.gemoc.executionframework.engine.commons.K3DslHelper;
 
 
 public class PolycarRTDAccessor {
-	public static java.lang.Boolean getTrigger(fr.unice.polytech.dsl.polycar.EnvironmentEvent eObject) {
-		System.out.println(eObject.getType().toString());
-		System.out.println((java.lang.Boolean)  getAspectProperty(eObject, "fr.unice.polytech.dsl.polycar.Polycar", "fr.unice.polytech.dsl.polycar.k3.EnvironmentEventAspect", "trigger"));
+  public static java.lang.Boolean gettrigger(EObject eObject) {
 		return (java.lang.Boolean)  getAspectProperty(eObject, "fr.unice.polytech.dsl.polycar.Polycar", "fr.unice.polytech.dsl.polycar.k3.EnvironmentEventAspect", "trigger");
 	}
-	public static boolean setTrigger(fr.unice.polytech.dsl.polycar.EnvironmentEvent eObject, java.lang.Boolean newValue) {
+	public static boolean settrigger(EObject eObject, java.lang.Boolean newValue) {
 		return setAspectProperty(eObject, "fr.unice.polytech.dsl.polycar.Polycar", "fr.unice.polytech.dsl.polycar.k3.EnvironmentEventAspect", "trigger", newValue);
 	}
 
-	public static Object getAspectProperty(EObject eObject, String languageName, String aspectName, String propertyName) {
-		List<Class<?>> aspects = K3DslHelper.getAspectsOn(languageName, eObject.getClass());
-		Class<?> aspect = null;
-		for (Class<?> a : aspects) {
-			try {
-				if (Class.forName(aspectName).isAssignableFrom(a)) {
-					aspect = a;
+public static Object getAspectProperty(EObject eObject, String languageName, String aspectName, String propertyName) {
+			List<Class<?>> aspects = K3DslHelper.getAspectsOn(languageName, eObject.getClass());
+			Class<?> aspect = null;
+			for (Class<?> a : aspects) {
+				try {
+					if (Class.forName(aspectName).isAssignableFrom(a)) {
+						aspect = a;
+					}
+				} catch (ClassNotFoundException e) {
+					e.printStackTrace();
 				}
-			} catch (ClassNotFoundException e) {
-				e.printStackTrace();
 			}
-		}
-		if (aspect == null) {
-			return null;
-		}
-		Object res = null;
-		 try {
-			res = aspect.getDeclaredMethod(propertyName, ((fr.inria.diverse.k3.al.annotationprocessor.Aspect)aspect.getAnnotations()[0]).className()).invoke(eObject, eObject);
-			if (res != null) {
-				return res;
-			}else {
+			if (aspect == null) {
 				return null;
 			}
-		} catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException
+			Object res = null;
+			 try {
+				res = aspect.getDeclaredMethod(propertyName, ((fr.inria.diverse.k3.al.annotationprocessor.Aspect)aspect.getAnnotations()[0]).className()).invoke(eObject, eObject);
+				if (res != null) {
+				return res;
+				}else {
+					return null;
+				}
+			} catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException
 					| NoSuchMethodException | SecurityException e) {
-			e.printStackTrace();
+				e.printStackTrace();
+			}
+			
+			 return null;
 		}
-
-		return null;
-	}
 	
 	
 	public static boolean setAspectProperty(EObject eObject, String languageName, String aspectName, String propertyName, Object newValue) {

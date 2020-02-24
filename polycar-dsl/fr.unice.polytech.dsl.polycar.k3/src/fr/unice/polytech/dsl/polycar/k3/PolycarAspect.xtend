@@ -28,7 +28,7 @@ class PolycarAspect {
 	@Main
 	def void run() {
 		println("Starting Car " + _self.name)
-		val car = new JbossCar("10.211.55.8", 19997) // Change with your V-REP machine IP (or 127.0.0.1)
+		val car = new JbossCar("127.0.0.1", 19997) // Change with your V-REP machine IP (or 127.0.0.1)
 		car.start()
 		
 		if (_self.defaultAction !== null) {
